@@ -32,8 +32,8 @@
     "browserify": "^5.10.1",
     "gulp-notify": "^1.5.0",
     "coffeeify": "^0.7.0",
-    "franim": "0.0.7",
     "numberer": "^0.1.1",
-    "gl-matrix": "^2.1.0"
+    "gl-matrix": "^2.1.0",
+    "franim": "^0.1.0"
   }
 }
