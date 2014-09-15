@@ -1,7 +1,7 @@
 vec2 = require('gl-matrix').vec2
 N = require 'numberer'
 draw = require './draw'
-class Point
+class Particle
   constructor: (obj) ->
     @center = vec2.fromValues obj.center.x, obj.center.y
     @acceleration = vec2.fromValues 0, 0
@@ -52,33 +52,20 @@ class Point
     vec2.set @acceleration, 0 , 0
     return
 
-  drawPoint: (ctx) ->
-    ctx.beginPath()
-    ctx.arc @center[0], @center[1], 0.1, 0, 2 * Math.PI, false
-    ctx.lineWidth = 0.5
-    ctx.strokeStyle = 'rgb(255,255,255)'
-    ctx.stroke()
+  draw: (ctx, pointColor, circleColor, lineColor) ->
+    draw.circle(ctx,@center,0.6,pointColor)
     if window.drawCircle
-      ctx.beginPath()
-      ctx.arc @center[0], @center[1], @radius.get(), 0, 2 * Math.PI, false
-      ctx.lineWidth = 1
-      ctx.strokeStyle = 'rgba(255,255,255,0.1)'
-      ctx.stroke()
+      draw.circle(ctx,@center,@radius.get(),circleColor)
 
-  draw: (ctx) ->
-    @drawPoint(ctx)
-    
-    for line in @drawLines
-      line[2] = "rgba(255,255,255,#{line[2]})"
-      draw.line.apply(ctx,line)
+    for lineArgs in @drawLines
+      draw.line(ctx,lineArgs[0],lineArgs[1],lineColor(lineArgs[2]))
     @drawLines = []
-
     return
 
-Point.checkOverlaps = (points) ->
+Particle.checkOverlaps = (points) ->
   length = points.length - 1 
   for i in [0..length]
     points[i].checkOverlap(points,i,length)
   return
 
-module.exports = Point
+module.exports = Particle
