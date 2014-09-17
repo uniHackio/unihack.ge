@@ -8,7 +8,7 @@ class Particle
     @velocity = vec2.fromValues obj.velocity.x, obj.velocity.y
     @radius = new N(obj.radius)
 
-    @mass = 1 # @radius.get() * @radius.get() * 2 *Math.PI
+    @mass = obj.mass # @radius.get() * @radius.get() * 2 *Math.PI
     @drawLines = []
  
   applyForce: (force) ->
@@ -53,7 +53,7 @@ class Particle
     return
 
   draw: (ctx, pointColor, circleColor, lineColor) ->
-    draw.circle(ctx,@center,0.6,pointColor)
+    draw.circle(ctx,@center,@mass*0.6,pointColor)
     if window.drawCircle
       draw.circle(ctx,@center,@radius.get(),circleColor)
 

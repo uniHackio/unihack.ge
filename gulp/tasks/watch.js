@@ -6,7 +6,7 @@
 var gulp = require('gulp');
 
 gulp.task('watch', ['setWatch', 'connect', 'build'], function() {
-  // gulp.watch('src/sass/**', ['sass']);
+  gulp.watch('src/styles/**', ['stylus']);
   // gulp.watch('src/images/**', ['images']);
-  gulp.watch('src/htdocs/**', ['markup']);
+  gulp.watch('src/docs/**', ['jade']);
 });

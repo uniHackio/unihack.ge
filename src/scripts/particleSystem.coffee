@@ -23,6 +23,7 @@ class ParticleSystem
           x: Math.random() * velocity - velocity/2
           y: Math.random() * velocity - velocity/2
         radius: Math.random() * 60 + 10
+        mass: Math.random()*2 + 1
     
     return
 

@@ -1,0 +1,6 @@
+mixin page(name)
+  div.page(id= 'page-' + name class='page-' + name)&attributes(attributes)
+    div.background(id= 'background-' + name class='background-' + name)
+    div.content(id= 'content-' + name class='content-' + name)
+      if block
+        block

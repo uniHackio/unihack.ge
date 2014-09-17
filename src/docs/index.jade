@@ -1,0 +1,12 @@
+extends ./layout/main.jade
+include ./includes/page.jade
+
+block content
+  +page('home')
+    include ./pages/home.jade
+  +page('events')
+  +page('philosopy')
+    include:markdown ./articles/philosopy.md
+  +page('community')
+  +page('team')
+  +page('sponsors')
