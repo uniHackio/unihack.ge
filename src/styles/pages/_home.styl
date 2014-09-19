@@ -1,21 +1,114 @@
+$logoFontFamily = Monaco, Consolas, "Lucida Console", monospace
 .page-home
-  background rgb(0, 15, 26)
+  .background
+    background: rgb(0, 15, 26)
+    bottom: 10em
+  .centered-wrapper
+    padding-bottom: 10em
+  a
+    text-decoration: none
   header
-    color rgba(228, 228, 228, 1)
-    text-shadow 0 1px rgb(0, 0, 0)
-    font-family Monaco, Consolas, "Lucida Console", monospace
-    position relative
-    display inline-block
-  .title
-    font-weight normal
-    margin 0
-    font-size 5em
-    line-height 1em
-  .subtitle
-    margin 0
-    font-weight normal
-    font-size 1em
-    text-align right
-    height 1.5em
-    right 0
-    bottom 0
+    color: rgba(228, 228, 228, 1)
+    text-shadow: 0 1px rgb(0, 0, 0)
+    font-family: $logoFontFamily
+    position: relative
+    display: inline-block
+    .title
+      font-weight: normal
+      margin: 0
+      font-size: 8em
+      line-height: 1em
+    .subtitle
+      margin: 0
+      font-weight: normal
+      font-size: 1.6em
+      text-align: right
+      height: 1.5em
+      right: 0
+      bottom: 0
+
+nav#social
+  position: absolute
+  top: 2em
+  right: 2em
+  a
+    display: inline-block
+    font-size: 2em
+    size: 1em 1em
+    line-height: 1em
+    color: white
+    opacity: 0.7
+    transition: opacity 0.2s ease-out;
+    &:hover
+      opacity: 1
+    span
+      display: none
+    &+a
+      margin-left: 0.5em
+    &.facebook:before
+      content: 'f'
+    &.twitter:before
+      content: 't'
+    &.youtube:before
+      content: 'y'
+    &.google:before
+      content: 'g'
+
+nav#main
+  $backgroundColor = hsl(0, 0, 95)
+  $logoColor = hsl(0,0,20)
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  height: 10em
+  background: $backgroundColor
+  .unihack
+    font-family: $logoFontFamily
+    font-size: 3em
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    color: $logoColor
+    height: (4 / @font-size)
+    line-height: @height
+    margin: (3 / @font-size)
+  ul
+    position: absolute
+    margin: 0
+    right: 0
+    bottom: 1
+    top: 0
+    li
+      display: inline-block
+      height: 100%
+      a
+        padding: 3em 2em 2em
+        display: block
+        box-shadow: inset 0 0 red
+        transition: all 0.1s linear;
+        &:hover
+          box-shadow: inset 0 3px red
+
+        span
+          display: block
+          text-align: left
+          font-family: $logoFontFamily
+        .title
+          font-size: 2.5em
+          line-height: (3 / @font-size)
+          color: darken($logoColor,20%)
+          text-shadow: 0 0.05em white
+        .subtitle
+          color: lighten($logoColor,70%)
+          font-size: 1.5em
+          line-height: (2 / @font-size)
+        
+
+
+
+
+
+
+

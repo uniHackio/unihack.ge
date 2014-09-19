@@ -1,8 +1,28 @@
 include ../includes/centered.jade
+mixin mainNavigationLink(target,title,subtitle)
+  li(class='for-' + target)
+    a(href='#' + target)
+      span.title=title
+      span.subtitle=subtitle 
+
+mixin socialLink(target,title,link)
+  a(class=target href=link) 
+    span=title
 
 +centered()
-  //- TODO: social
+  nav#social
+    +socialLink('facebook', 'uniHackge on facebook', 'https://www.facebook.com/unihackge')
+    +socialLink('twitter', 'uniHackge on twitter', 'https://twitter.com/unihackge')
+    +socialLink('youtube', 'uniHackge on youtube', 'https://www.youtube.com/uniHackge')
+    +socialLink('google', 'uniHackge on google+', 'https://plus.google.com/107084110225494322165')
   header
-    h1.title= '.uniHack'
-    h2.subtitle= 'we power hackathons'
-  //- TODO: navigation
+    h1.title .uniHack
+    h2.subtitle we power hackathons
+  nav#main
+    a.unihack(href='#home') .uniHack
+    ul
+      +mainNavigationLink('events', 'Events', 'what we have done')
+      +mainNavigationLink('philosophy', 'Philosophy', 'what hackathon is')
+      +mainNavigationLink('community', 'Community', 'what epic crowd think')
+      +mainNavigationLink('team', 'Team', 'who we are')
+      +mainNavigationLink('sponsors', 'Sponsors', 'what with')
