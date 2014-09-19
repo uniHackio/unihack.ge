@@ -2,12 +2,14 @@ var gulp = require('gulp')
   , nib = require('nib')
   , cache = require('gulp-cached')
   , progeny = require('gulp-progeny')
+  , plumber = require('gulp-plumber')
   , stylus = require('gulp-stylus')
   , connect = require('gulp-connect')
-  , ignore = require('gulp-ignore');
+  , filter = require('gulp-filter');
 
 gulp.task('stylus', function(){
   return gulp.src('src/styles/**')
+    .pipe(plumber())
     .pipe(cache('style'))
     .pipe(progeny())
     .pipe(stylus({
@@ -18,8 +20,7 @@ gulp.task('stylus', function(){
         basePath: 'css'
       }
     }))
-    .pipe(ignore.exclude('**/_*.css'))
-    .pipe(ignore.include({isFile:true}))
+    .pipe(filter(['**.*','!**/_*.css']))
     .pipe(gulp.dest('./build'))
     .pipe(connect.reload());
 
