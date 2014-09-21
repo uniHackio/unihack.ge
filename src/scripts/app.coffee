@@ -4,6 +4,26 @@ ParticleSystem = require './particleSystem'
 onscroller = require('./onscroller')
 pixelize = require('./pixelize')
 homeContent = document.querySelector('.page-home .centered-wrapper .centered')
+eventsPage = document.querySelector('.page-events')
+philosophyPage = document.querySelector('.page-philosophy')
+teamPage = document.querySelector('.page-team')
+sponsorsPage = document.querySelector('.page-sponsors')
+
+onscroller.push ((pages,pageIsInView)->
+  ->
+    for page in pages
+      if pageIsInView(page)
+        document.body.classList.add(page.id+'-visable')
+      else      
+        document.body.classList.remove(page.id+'-visable')
+
+)([eventsPage, philosophyPage, teamPage, sponsorsPage],(page) ->
+  scrollTop = document.body.scrollTop
+  scrollHeight = document.body.offsetHeight
+  pageTop = page.offsetTop
+  pageHeight = page.offsetHeight
+  scrollTop > pageTop - scrollHeight and scrollTop < pageTop + pageHeight
+)
 
 [
   'safareli1', 
@@ -14,7 +34,6 @@ homeContent = document.querySelector('.page-home .centered-wrapper .centered')
   'safareli6'
 ].forEach(pixelize)
 
-  
 f "background-home",
   config:
     resize: true
@@ -42,22 +61,25 @@ f "background-home",
   
   update: (time) ->
     @system.update(time)  
+        
     return
 
   draw: (ctx) ->
+    if window.logTime
+      console.timeEnd('f')
+      console.time('f')
     @system.draw(ctx)
     return
 
   
-onscroller.push ()->
-  if window.scrollY > homeContent.offsetHeight
-    isHomeVisable = false
-  else
-    isHomeVisable = true
-  onHomeVisabilityChange(isHomeVisable)
- 
-onHomeVisabilityChange = (isHomeVisable)->
-  if isHomeVisable
+onscroller.push ((homeIsVisable,onHomeVisabilityChange)->
+  ->
+    if window.scrollY > homeContent.offsetHeight and homeIsVisable
+      onHomeVisabilityChange(homeIsVisable = false)
+    else if window.scrollY <= homeContent.offsetHeight and !homeIsVisable
+      onHomeVisabilityChange(homeIsVisable = true)
+)( true, (homeIsVisable)->
+  if homeIsVisable
     document.body.classList.add('home-visable')
     window.config.color.base.color.set('255,255,255')
     window.config.color.base.opacity.set(1)
@@ -65,4 +87,4 @@ onHomeVisabilityChange = (isHomeVisable)->
     document.body.classList.remove('home-visable')
     window.config.color.base.color.set('0,0,0')  
     window.config.color.base.opacity.set(0.25)
-
+)

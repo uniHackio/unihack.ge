@@ -8,6 +8,7 @@ module.exports = (width, height, amplitude)->
     mask.interval(amplitude, amplitude),#3x
     mask.interval(height - amplitude, amplitude)#3y
   ]
+  console.log(range)
   api = mask(mask.randomGeometryFromRange(range))
   api.range = range
   return api

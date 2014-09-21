@@ -19,12 +19,12 @@ module.exports = (id)->
     triangle = triangler(@width,@height,20)
     ctx = canvas.getContext("2d")
     v = [
-      (Math.random() - 0.5)/2,
-      (Math.random() - 0.5)/2,
-      (Math.random() - 0.5)/2,
-      (Math.random() - 0.5)/2,
-      (Math.random() - 0.5)/2,
-      (Math.random() - 0.5)/2,
+      Math.random() - 0.5,
+      Math.random() - 0.5,
+      Math.random() - 0.5,
+      Math.random() - 0.5,
+      Math.random() - 0.5,
+      Math.random() - 0.5,
     ]
     rescale = (->
       cache = {}
@@ -37,14 +37,13 @@ module.exports = (id)->
         triangle.mask(ctx)
     )()
     rescale(minScale) 
-    draw.loop (time)->
+    looper = draw.loop (time)->
       triangle.geometry = triangle.geometry.map (point,i)->
         interval = triangle.range[i]
         if point+v[i] <=interval[0] || point+v[i] >= interval[1]
           v[i]*=-1
-        return point + v[i]*2
-      resize(image, scale, canvas)
-      triangle.mask(ctx)
+        return point + v[i]
+      rescale(scale)
     return
 
   image.src = canvas.dataset.source
