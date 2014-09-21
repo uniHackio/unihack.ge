@@ -1,5 +1,5 @@
 var gulp = require('gulp');
 
 gulp.task('default', ['clean'],function(){
-  gulp.run('watch');
+  gulp.run(['watch','images']);
 });

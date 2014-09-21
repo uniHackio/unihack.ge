@@ -1,0 +1,39 @@
+include ../includes/icon.jade
+section.events
+  h1.hidden Events
+  article
+    header.no-date
+      h1 We are working
+    p get ready for next epic hack
+
+  article
+    header
+      h1 hack@cst
+      nav
+        a(href='//blog.unihack.ge/hackatcst' title='our blogpost about hack@cst')
+          +icon('paragraph')
+        a(href='//cst.unihack.ge/' title='web page of hack@cst')
+          +icon('info-circle')
+      time(datetime="2013-12-20/2013-12-22")
+        i.year 2013
+        i.month dec
+    include:markdown ../articles/hackatcst.md
+
+  article
+    header
+      h1 hack@macs
+      nav
+        a(href='//blog.unihack.ge/hackatmacs' title='our blogpost about hack@macs')
+          +icon('paragraph')
+        a(href='//macs.unihack.ge/' title='web page of hack@macs')
+          +icon('info-circle')
+      time(datetime="2014-03-14/2014-03-16")
+        i.year 2014
+        i.month mar
+    include:markdown ../articles/hackatmacs.md
+
+  article
+    header.no-date
+      //- todo use date tag
+      h1 We were born in 2013
+    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore vero maiores mollitia exercitationem rem 

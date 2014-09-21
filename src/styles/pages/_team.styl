@@ -1,0 +1,45 @@
+.page-team
+  // .background
+  //   background: white
+  .content
+    padding-top: 5em
+  .team
+    width: 90em
+    margin: 0 auto
+  .about-us
+    font-size: 1.5em
+    color: $blue
+    font-family: $logoFontFamily
+    text-align: justify
+    h1,h2,h3,h4,h5,h6
+      text-align: center
+  .members
+    clearfix()
+  .member
+    width: 27em
+    float: left
+    margin-left: 4.5em
+    padding-bottom: 2em
+    text-align: center
+    &:nth-child(3n-2)
+      margin-left: 0
+    .name,.position
+      margin: 0.5em 0
+    .name
+      font-family: $logoFontFamily
+      font-size: 2em
+      color: $blue
+    .position
+      font-size: 1.7em
+      color: $lightGray
+    .picture
+      size: 27em 27em
+    .links
+      text-align: center
+      a
+        font-size: 2em
+        margin: 0.5em
+        opacity: 0.3
+        &:hover
+          opacity: 1
+          transition: opacity 0.2s ease-out

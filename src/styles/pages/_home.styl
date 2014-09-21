@@ -1,8 +1,11 @@
-$logoFontFamily = Monaco, Consolas, "Lucida Console", monospace
 .page-home
+  height: 100%
   .background
-    background: rgb(0, 15, 26)
-    bottom: 10em
+    position: fixed
+    .home-visable &
+      background: $darkBlue
+      bottom: 10em
+    
   .centered-wrapper
     padding-bottom: 10em
   a
@@ -29,40 +32,32 @@ $logoFontFamily = Monaco, Consolas, "Lucida Console", monospace
 
 nav#social
   position: absolute
-  top: 2em
-  right: 2em
+  top: 7em
+  right: 7em
   a
     display: inline-block
     font-size: 2em
     size: 1em 1em
     line-height: 1em
     color: white
-    opacity: 0.7
+    opacity: 0.8
     transition: opacity 0.2s ease-out;
     &:hover
       opacity: 1
     span
       display: none
     &+a
-      margin-left: 0.5em
-    &.facebook:before
-      content: 'f'
-    &.twitter:before
-      content: 't'
-    &.youtube:before
-      content: 'y'
-    &.google:before
-      content: 'g'
+      margin-left: 1em
 
 nav#main
   $backgroundColor = hsl(0, 0, 95)
-  $logoColor = hsl(0,0,20)
   position: absolute
   bottom: 0
   left: 0
   right: 0
-  height: 10em
-  background: $backgroundColor
+  height: 9.9em
+  border-bottom: 0.1em solid $lightGray
+  background: $lightestGray
   .unihack
     font-family: $logoFontFamily
     font-size: 3em
@@ -70,10 +65,13 @@ nav#main
     left: 0
     top: 0
     bottom: 0
-    color: $logoColor
+    color: $darkGray
     height: (4 / @font-size)
     line-height: @height
     margin: (3 / @font-size)
+    &:before
+      content: '.'
+      color: $blue
   ul
     position: absolute
     margin: 0
@@ -86,22 +84,22 @@ nav#main
       a
         padding: 3em 2em 2em
         display: block
-        box-shadow: inset 0 0 red
+        box-shadow: inset 0 0 $blue
         transition: all 0.1s linear;
         &:hover
-          box-shadow: inset 0 3px red
+          box-shadow: inset 0 -3px $blue
 
         span
           display: block
           text-align: left
           font-family: $logoFontFamily
+          text-shadow: 0 0.05em white
         .title
           font-size: 2.5em
           line-height: (3 / @font-size)
-          color: darken($logoColor,20%)
-          text-shadow: 0 0.05em white
+          color: $darkGray
         .subtitle
-          color: lighten($logoColor,70%)
+          color: $lightGray
           font-size: 1.5em
           line-height: (2 / @font-size)
         

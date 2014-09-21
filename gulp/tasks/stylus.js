@@ -8,9 +8,9 @@ var gulp = require('gulp')
   , filter = require('gulp-filter');
 
 gulp.task('stylus', function(){
-  return gulp.src('src/styles/**')
+  return gulp.src('src/styles/style.styl')
     .pipe(plumber())
-    .pipe(cache('style'))
+    // .pipe(cache('style'))
     .pipe(progeny())
     .pipe(stylus({
       use: [nib()],

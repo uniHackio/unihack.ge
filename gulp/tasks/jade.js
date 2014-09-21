@@ -12,7 +12,7 @@ var gulp = require('gulp')
 gulp.task('jade', function(){
   return gulp.src('src/docs/**/*.jade')
     .pipe(plumber())
-    .pipe(cache('style'))
+    // .pipe(cache('jade'))
     .pipe(progeny())
     .pipe(jade({
       pretty: true,

@@ -1,0 +1,17 @@
+include ../includes/socialLink.jade
+mixin member(id,name,position,image,links)
+  section.member
+    canvas.picture(id=id data-source=image data-scale='0.1')
+    h1.name=name
+    h2.position=position
+    nav.links
+      each link in links
+        +socialLink(link.icon,name +' on'+ link.on,link.href)
+      
+section.team
+  article.about-us
+    include:markdown ../articles/about-us.md
+
+  div.members
+    for member in members
+      +member(member.id,member.name,member.position,member.image,member.links)
