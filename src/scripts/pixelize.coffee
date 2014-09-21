@@ -19,12 +19,12 @@ module.exports = (id)->
     triangle = triangler(@width,@height,20)
     ctx = canvas.getContext("2d")
     v = [
-      Math.random() - 0.5,
-      Math.random() - 0.5,
-      Math.random() - 0.5,
-      Math.random() - 0.5,
-      Math.random() - 0.5,
-      Math.random() - 0.5,
+      (Math.random() - 0.5)/2,
+      (Math.random() - 0.5)/2,
+      (Math.random() - 0.5)/2,
+      (Math.random() - 0.5)/2,
+      (Math.random() - 0.5)/2,
+      (Math.random() - 0.5)/2,
     ]
     rescale = (->
       cache = {}
