@@ -43,4 +43,5 @@ module.exports = function( img, scale, out) {
         out.height,
         outPixels
       ), 0, 0 );
+    return outPixels
 }

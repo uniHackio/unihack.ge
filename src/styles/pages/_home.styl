@@ -51,8 +51,13 @@ nav#social
 
 nav#main
   $backgroundColor = hsl(0, 0, 95)
-  position: absolute
-  bottom: 0
+  .home-visable &
+    position: absolute
+    bottom: 0
+    top: initial
+  position: fixed
+  z-index: 1000
+  top:0
   left: 0
   right: 0
   height: 9.9em

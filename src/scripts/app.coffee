@@ -5,7 +5,14 @@ onscroller = require('./onscroller')
 pixelize = require('./pixelize')
 homeContent = document.querySelector('.page-home .centered-wrapper .centered')
 
-['safareli1', 'safareli2', 'safareli3', 'safareli4', 'safareli5', 'safareli6'].forEach(pixelize)
+[
+  'safareli1', 
+  'safareli2', 
+  'safareli3', 
+  'safareli4', 
+  'safareli5', 
+  'safareli6'
+].forEach(pixelize)
 
   
 f "background-home",

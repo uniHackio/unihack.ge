@@ -1,18 +1,13 @@
-range = (base, length)->
-  return base + Math.random()*2*length - length
+mask = require('./mask')
 module.exports = (width, height, amplitude)->
-  t = [
-    range(width/2, amplitude), range(amplitude, amplitude), 
-    range(width - amplitude, amplitude), range(height - amplitude, amplitude), 
-    range(amplitude, amplitude), range(height - amplitude, amplitude)
-  ] 
-  return (ctx)->
-    ctx.save()
-    ctx.globalCompositeOperation = 'destination-in'
-    ctx.beginPath()
-    ctx.moveTo(t[0], t[1]);
-    ctx.lineTo(t[2], t[3]);
-    ctx.lineTo(t[4], t[5]);
-    ctx.fill()
-    ctx.restore()
-    return t
+  range = [
+    mask.interval(width/2, amplitude),#1x
+    mask.interval(amplitude, amplitude), #1y
+    mask.interval(width - amplitude, amplitude),#2x
+    mask.interval(height - amplitude, amplitude), #2y
+    mask.interval(amplitude, amplitude),#3x
+    mask.interval(height - amplitude, amplitude)#3y
+  ]
+  api = mask(mask.randomGeometryFromRange(range))
+  api.range = range
+  return api

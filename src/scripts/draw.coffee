@@ -19,5 +19,20 @@ draw =
     ctx.closePath()
     ctx.restore()
     return
+  loop:(f)->
+    isRunning = true
+    animationCallback = (time)->
+      f(time)
+      if isRunning == false
+        window.cancelAnimationFrame(requestId)
+        requestId = 0
+      else
+        window.requestAnimationFrame(animationCallback)    
+    
+    window.requestAnimationFrame(animationCallback);
+    return {
+      toggle:->
+        isRunning = !isRunning;
+    }
 
 module.exports = draw;

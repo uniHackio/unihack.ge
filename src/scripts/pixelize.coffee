@@ -1,46 +1,50 @@
 resize = require('./resize')
 triangler = require('./triangler')
-
+draw = require('./draw')
 module.exports = (id)->
   canvas = document.getElementById(id)
   minScale = parseFloat(canvas.dataset.scale)
-  isOut = true
-  animationInterval = null
+  requestId = null
+  triangle = null
+  rescale = null
   scale = minScale
-  rescale = (scale)->
-    return
-  canvas.parentNode.onmouseover = ()-> 
-    if isOut
-      isOut = false
-      animationInterval = setInterval (->
-        if isOut
-          clearInterval(animationInterval)
-          return
-        if scale >= 0.9
-          scale = 0.9
-          clearInterval(animationInterval)
-        else
-          scale +=Math.sqrt(scale)/2
-        rescale(scale)
-        return
-      ), 1000/60
-      
-  # todo use jquery for events
-  # todo use for interval
-  # http://www.bennadel.com/blog/1856-using-jquery-s-animate-step-callback-function-to-create-custom-animations.htm
-  canvas.parentNode.onmouseout = ()-> 
-    isOut = true
-    scale = minScale
-    rescale(scale)
+  $(canvas).parent().hover (->
+    scale = 0.9
+  ), ->
+    scale = 0.1
+
 
   image = new Image()
   image.onload = ->
     triangle = triangler(@width,@height,20)
     ctx = canvas.getContext("2d")
-    rescale = (s)->
-      resize(image, s, canvas)
-      triangle(ctx)
-    rescale(minScale)
+    v = [
+      Math.random() - 0.5,
+      Math.random() - 0.5,
+      Math.random() - 0.5,
+      Math.random() - 0.5,
+      Math.random() - 0.5,
+      Math.random() - 0.5,
+    ]
+    rescale = (->
+      cache = {}
+      return (s)->
+        key = s.toFixed(2)
+        if cache[key] == undefined
+          cache[key] = resize(image, s, canvas);
+        else
+          ctx.putImageData(cache[key],0,0)
+        triangle.mask(ctx)
+    )()
+    rescale(minScale) 
+    draw.loop (time)->
+      triangle.geometry = triangle.geometry.map (point,i)->
+        interval = triangle.range[i]
+        if point+v[i] <=interval[0] || point+v[i] >= interval[1]
+          v[i]*=-1
+        return point + v[i]*2
+      resize(image, scale, canvas)
+      triangle.mask(ctx)
     return
 
   image.src = canvas.dataset.source
