@@ -24,11 +24,11 @@ var members = [
     link('twitter', 'twitter', 'https://twitter.com/unihackge'),
     link('google-plus', 'google+', 'https://plus.google.com/107084110225494322165'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
-  ]),person('safareli3','Irakli Safareli', 'Loard of the Code',imageURL,[
-    link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
-    link('twitter', 'twitter', 'https://twitter.com/unihackge'),
-    link('google-plus', 'google+', 'https://plus.google.com/107084110225494322165'),
-    link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
+  ]),person('stichoza','Levan Velijanashvili', '', imageURL,[
+    link('facebook', 'facebook', 'https://www.facebook.com/stichoza'),
+    link('twitter', 'twitter', 'https://twitter.com/Stichoza'),
+    link('google-plus', 'google+', 'https://plus.google.com/101847100678903848318'),
+    link('youtube-play', 'youtube', 'https://www.youtube.com/stichoza'),
   ]),person('safareli4','Irakli Safareli', 'Loard of the Code',imageURL,[
     link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
     link('twitter', 'twitter', 'https://twitter.com/unihackge'),
