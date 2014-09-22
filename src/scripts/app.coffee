@@ -3,6 +3,7 @@ N = require 'numberer'
 ParticleSystem = require './particleSystem'
 onscroller = require('./onscroller')
 pixelize = require('./pixelize')
+locals = require '../locals'
 homeContent = document.querySelector('.page-home .centered-wrapper .centered')
 eventsPage = document.querySelector('.page-events')
 philosophyPage = document.querySelector('.page-philosophy')
@@ -24,15 +25,9 @@ onscroller.push ((pages,pageIsInView)->
   pageHeight = page.offsetHeight
   scrollTop > pageTop - scrollHeight and scrollTop < pageTop + pageHeight
 )
-
-[
-  'safareli1', 
-  'safareli2', 
-  'safareli3', 
-  'safareli4', 
-  'safareli5', 
-  'safareli6'
-].forEach(pixelize)
+locals.members.forEach (member)->
+  console.log(member.id)
+  pixelize(member.id)
 
 f "background-home",
   config:
@@ -60,7 +55,9 @@ f "background-home",
     return
   
   update: (time) ->
+    console.time('update')
     @system.update(time)  
+    console.timeEnd('update')
         
     return
 
@@ -68,7 +65,10 @@ f "background-home",
     if window.logTime
       console.timeEnd('f')
       console.time('f')
+    console.time('draw')
     @system.draw(ctx)
+    console.timeEnd('draw')
+    # @anim.stop()
     return
 
   

@@ -11,35 +11,37 @@ function args2Obj () {
 
 var person = args2Obj('id','name','position','image','links');
 var link = args2Obj('icon', 'on', 'href');
-// var imageURL = 'https://avatars1.githubusercontent.com/u/1932383?v=2&s=270';
-var imageURL = '/images/safareli.jpg';
 var members = [
-  person('gtkesh','Giorgi Tkeshelashvili', 'Georgia Tech',imageURL,[
+  person('gtkesh','Giorgi Tkeshelashvili', 'Georgia Tech','',[
     link('facebook', 'facebook', 'https://www.facebook.com/gtkesh'),
     link('twitter', 'twitter', 'https://twitter.com/gtkesh'),
     link('google-plus', 'google+', 'https://plus.google.com/u/0/+GiorgiTkeshelashvili'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
-  ]),person('Zakala','Revaz Zakalashvili', '','http://www.gravatar.com/avatar/aead2ed56ad0638d911f23a39e1f11cd.png?size=256',[
+  ]),person('safareli','Irakli Safareli', 'Lord of the Code','/images/safareli.jpg',[
+    link('facebook', 'facebook', 'https://www.facebook.com/sapa8'),
+    link('twitter', 'twitter', 'https://twitter.com/safareli'),
+    link('google-plus', 'google+', 'https://google.com/+IrakliSafareli'),
+    link('youtube-play', 'youtube', 'https://www.youtube.com/isafareli'),
+  ]),person('revazi','Revaz Zakalashvili', '','/images/revazi.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
     link('twitter', 'twitter', 'https://twitter.com/rzakala'),
     link('google-plus', 'google+', 'https://plus.google.com/+RevazZakalashvili-zakala/'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
-  ]),person('stichoza','Levan Velijanashvili', 'UNIX Junkie', 'http://www.gravatar.com/avatar/a4b21b6e5e8b2ee0512e7130aa95aea3.png?size=256',[
+  ]),person('stichoza','Levan Velijanashvili', 'UNIX Junkie', '/images/stichoza.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/stichoza'),
     link('twitter', 'twitter', 'https://twitter.com/Stichoza'),
     link('google-plus', 'google+', 'https://plus.google.com/101847100678903848318'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/stichoza'),
-  ]),person('zero','Luka Ramishvili', 'metahacker','http://luka.ge/zero-avatar.jpg',[
+  ]),person('zero','Luka Ramishvili', 'metahacker','/images/zero.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/lukaramishvili'),
     link('twitter', 'twitter', 'https://twitter.com/lukaramishvili'),
-    link('google-plus', 'google+', ''),
     link('youtube-play', 'youtube', 'https://www.youtube.com/lukaramishvili'),
-  ]),person('demonno','Demur Nodia', '',imageURL,[
+  ]),person('demonno','Demur Nodia', 'TODO','__',[
     link('facebook', 'facebook', 'https://www.facebook.com/demuri.nodia'),
     link('twitter', 'twitter', 'https://twitter.com/demurnodia'),
     link('google-plus', 'google+', 'https://plus.google.com/u/0/+DemurNodia'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/demurnodia'),
-  ]),person('safareli6','Irakli Safareli', 'Loard of the Code',imageURL,[
+  ]),person('tebex','Giorgi Tabidze', 'TODO','/images/safareli.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
     link('twitter', 'twitter', 'https://twitter.com/unihackge'),
     link('google-plus', 'google+', 'https://plus.google.com/107084110225494322165'),
