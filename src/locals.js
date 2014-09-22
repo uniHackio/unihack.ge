@@ -19,10 +19,10 @@ var members = [
     link('twitter', 'twitter', 'https://twitter.com/unihackge'),
     link('google-plus', 'google+', 'https://plus.google.com/107084110225494322165'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
-  ]),person('safareli2','Irakli Safareli', 'Loard of the Code',imageURL,[
+  ]),person('Zakala','Revaz Zakalashvili', '','http://www.gravatar.com/avatar/aead2ed56ad0638d911f23a39e1f11cd.png',[
     link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
-    link('twitter', 'twitter', 'https://twitter.com/unihackge'),
-    link('google-plus', 'google+', 'https://plus.google.com/107084110225494322165'),
+    link('twitter', 'twitter', 'https://twitter.com/rzakala'),
+    link('google-plus', 'google+', 'https://plus.google.com/+RevazZakalashvili-zakala/'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
   ]),person('stichoza','Levan Velijanashvili', '', imageURL,[
     link('facebook', 'facebook', 'https://www.facebook.com/stichoza'),
