@@ -44,6 +44,11 @@ var members = [
     link('twitter', 'twitter', 'https://twitter.com/unihackge'),
     link('google-plus', 'google+', 'https://plus.google.com/107084110225494322165'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
+  ]),person('otarza','Otar Zakalashvili', 'Technology Agnostic','https://www.dropbox.com/s/ja0o4mchc98lqy8/otar270.jpeg',[
+    link('facebook', 'facebook', 'https://www.facebook.com/otarza'),
+    link('twitter', 'twitter', 'https://twitter.com/otarza'),
+    link('linkedin', 'linkedin', 'www.linkedin.com/pub/otar-zakalashvili/15/3a8/547/'),
+    link('google-plus', 'google+', 'https://plus.google.com/109734750145229671001'),
   ]),
 ];
 module.exports = {
