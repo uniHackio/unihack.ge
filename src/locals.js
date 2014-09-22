@@ -17,7 +17,7 @@ var members = [
   person('gtkesh','Giorgi Tkeshelashvili', 'Georgia Tech',imageURL,[
     link('facebook', 'facebook', 'https://www.facebook.com/gtkesh'),
     link('twitter', 'twitter', 'https://twitter.com/gtkesh'),
-    link('google-plus', 'google+', 'https://plus.google.com/107084110225494322165'),
+    link('google-plus', 'google+', 'https://plus.google.com/u/0/+GiorgiTkeshelashvili'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
   ]),person('Zakala','Revaz Zakalashvili', '','http://www.gravatar.com/avatar/aead2ed56ad0638d911f23a39e1f11cd.png',[
     link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
