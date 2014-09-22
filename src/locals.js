@@ -34,11 +34,11 @@ var members = [
     link('twitter', 'twitter', 'https://twitter.com/lukaramishvili'),
     link('google-plus', 'google+', ''),
     link('youtube-play', 'youtube', 'https://www.youtube.com/lukaramishvili'),
-  ]),person('safareli5','Irakli Safareli', 'Loard of the Code',imageURL,[
-    link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
-    link('twitter', 'twitter', 'https://twitter.com/unihackge'),
-    link('google-plus', 'google+', 'https://plus.google.com/107084110225494322165'),
-    link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
+  ]),person('demonno','Demur Nodia', '',imageURL,[
+    link('facebook', 'facebook', 'https://www.facebook.com/demuri.nodia'),
+    link('twitter', 'twitter', 'https://twitter.com/demurnodia'),
+    link('google-plus', 'google+', 'https://plus.google.com/u/0/+DemurNodia'),
+    link('youtube-play', 'youtube', 'https://www.youtube.com/demurnodia'),
   ]),person('safareli6','Irakli Safareli', 'Loard of the Code',imageURL,[
     link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
     link('twitter', 'twitter', 'https://twitter.com/unihackge'),
