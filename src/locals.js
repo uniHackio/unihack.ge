@@ -12,7 +12,7 @@ function args2Obj () {
 var person = args2Obj('id','name','position','image','links');
 var link = args2Obj('icon', 'on', 'href');
 var members = [
-  person('gtkesh','Giorgi Tkeshelashvili', 'Georgia Tech','',[
+  person('gtkesh','Giorgi Tkeshelashvili', 'Georgia Tech','/images/gtkesh.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/gtkesh'),
     link('twitter', 'twitter', 'https://twitter.com/gtkesh'),
     link('google-plus', 'google+', 'https://plus.google.com/u/0/+GiorgiTkeshelashvili'),
