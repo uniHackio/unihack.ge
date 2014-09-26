@@ -18,16 +18,17 @@ var members = [
     link('google-plus', 'google+', 'https://plus.google.com/u/0/+GiorgiTkeshelashvili'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
   ]),person('safareli','Irakli Safareli', 'Lord of the Code','/images/safareli.jpg',[
-    link('facebook', 'facebook', 'https://www.facebook.com/sapa8'),
     link('twitter', 'twitter', 'https://twitter.com/safareli'),
     link('google-plus', 'google+', 'https://google.com/+IrakliSafareli'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/isafareli'),
-  ]),person('revazi','Revaz Zakalashvili', '','/images/revazi.jpg',[
+    link('linkedin', 'linkedin', 'https://www.linkedin.com/in/safareli'),
+    link('github', 'github', 'https://github.com/safareli'),
+  ]),person('revazi','Revaz Zakalashvili', 'TODO','/images/revazi.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
     link('twitter', 'twitter', 'https://twitter.com/rzakala'),
     link('google-plus', 'google+', 'https://plus.google.com/+RevazZakalashvili-zakala/'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
-  ]),person('stichoza','Levan Velijanashvili', 'UNIX Junkie', '/images/stichoza.jpg',[
+  ]),person('stichoza','Levan Velijanashvili', 'UNIX Junkie', '/images/stichoza.png',[
     link('facebook', 'facebook', 'https://www.facebook.com/stichoza'),
     link('twitter', 'twitter', 'https://twitter.com/Stichoza'),
     link('google-plus', 'google+', 'https://plus.google.com/101847100678903848318'),
@@ -36,7 +37,7 @@ var members = [
     link('facebook', 'facebook', 'https://www.facebook.com/lukaramishvili'),
     link('twitter', 'twitter', 'https://twitter.com/lukaramishvili'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/lukaramishvili'),
-  ]),person('demonno','Demur Nodia', 'TODO','__',[
+  ]),person('demonno','Demur Nodia', 'TODO','/images/safareli.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/demuri.nodia'),
     link('twitter', 'twitter', 'https://twitter.com/demurnodia'),
     link('google-plus', 'google+', 'https://plus.google.com/u/0/+DemurNodia'),
@@ -46,10 +47,10 @@ var members = [
     link('twitter', 'twitter', 'https://twitter.com/unihackge'),
     link('google-plus', 'google+', 'https://plus.google.com/107084110225494322165'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
-  ]),person('otarza','Otar Zakalashvili', 'Technology Agnostic','https://www.dropbox.com/s/ja0o4mchc98lqy8/otar270.jpeg',[
+  ]),person('otarza','Otar Zakalashvili', 'Technology Agnostic','/images/otarza.jpeg',[
     link('facebook', 'facebook', 'https://www.facebook.com/otarza'),
     link('twitter', 'twitter', 'https://twitter.com/otarza'),
-    link('linkedin', 'linkedin', 'www.linkedin.com/pub/otar-zakalashvili/15/3a8/547/'),
+    link('linkedin', 'linkedin', 'https://www.linkedin.com/pub/otar-zakalashvili/15/3a8/547/'),
     link('google-plus', 'google+', 'https://plus.google.com/109734750145229671001'),
   ]),
 ];

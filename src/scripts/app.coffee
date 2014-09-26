@@ -29,6 +29,7 @@ locals.members.forEach (member)->
   console.log(member.id)
   pixelize(member.id)
 
+
 f "background-home",
   config:
     resize: true
@@ -62,12 +63,12 @@ f "background-home",
     return
 
   draw: (ctx) ->
-    if window.logTime
-      console.timeEnd('f')
-      console.time('f')
     console.time('draw')
     @system.draw(ctx)
     console.timeEnd('draw')
+    if window.logTime
+      console.timeEnd('f')
+      console.time('f')
     # @anim.stop()
     return
 
