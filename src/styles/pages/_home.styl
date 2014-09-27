@@ -1,13 +1,16 @@
+#main-background
+  z-index: 2
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
 .page-home
   height: 100%
+  .content
+    padding-top: 0
   .background
-    position: fixed
-    .home-visable &
-      background: $darkBlue
-      bottom: 10em
-    
-  .centered-wrapper
-    padding-bottom: 10em
+    background: $darkBlue
   a
     text-decoration: none
   header
@@ -48,70 +51,3 @@ nav#social
       display: none
     &+a
       margin-left: 1em
-
-nav#main
-  $backgroundColor = hsl(0, 0, 95)
-  .home-visable &
-    position: absolute
-    bottom: 0
-    top: initial
-  position: fixed
-  z-index: 1000
-  top:0
-  left: 0
-  right: 0
-  height: 9.9em
-  border-bottom: 0.1em solid $lightGray
-  background: $lightestGray
-  .unihack
-    font-family: $logoFontFamily
-    font-size: 3em
-    position: absolute
-    left: 0
-    top: 0
-    bottom: 0
-    color: $darkGray
-    height: (4 / @font-size)
-    line-height: @height
-    margin: (3 / @font-size)
-    &:before
-      content: '.'
-      color: $blue
-  ul
-    position: absolute
-    margin: 0
-    right: 0
-    bottom: 1
-    top: 0
-    li
-      display: inline-block
-      height: 100%
-      a
-        padding: 3em 2em 2em
-        display: block
-        box-shadow: inset 0 0 $blue
-        transition: all 0.1s linear;
-        &:hover
-          box-shadow: inset 0 -3px $blue
-
-        span
-          display: block
-          text-align: left
-          font-family: $logoFontFamily
-          text-shadow: 0 0.05em white
-        .title
-          font-size: 2.5em
-          line-height: (3 / @font-size)
-          color: $darkGray
-        .subtitle
-          color: $lightGray
-          font-size: 1.5em
-          line-height: (2 / @font-size)
-        
-
-
-
-
-
-
-

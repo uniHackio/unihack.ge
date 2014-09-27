@@ -1,11 +1,28 @@
+mixin mainNavigationLink(target,title,subtitle)
+  li(class='for-' + target)
+    a(href='#' + target)
+      span.title=title
+      span.subtitle=subtitle 
+
+
 doctype html
 html(lang="en")
   head
     title= uniHack
     link(rel="stylesheet" href="style.css")
   body.home-visable
+    div#main-background
+    nav#main
+      a.unihack(href='#home') uniHack
+      ul
+        +mainNavigationLink('events', 'Events', 'what we have done')
+        +mainNavigationLink('philosophy', 'Philosophy', 'what hackathon is')
+        //- TODO
+        //- +mainNavigationLink('community', 'Community', 'what epic crowd think')
+        +mainNavigationLink('team', 'Team', 'who we are')
+        +mainNavigationLink('sponsors', 'Sponsors', 'what with')
     div#main-wrapper
       block content
     script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
-    script(src="//cdn.rawgit.com/jondavidjohn/hidpi-canvas-polyfill/master/dist/hidpi-canvas.min.js")
+    //- script(src="//cdn.rawgit.com/jondavidjohn/hidpi-canvas-polyfill/master/dist/hidpi-canvas.min.js")
     script(src='app.js')

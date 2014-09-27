@@ -1,12 +1,6 @@
 include ../includes/icon.jade
 include ../includes/centered.jade
 include ../includes/socialLink.jade
-mixin mainNavigationLink(target,title,subtitle)
-  li(class='for-' + target)
-    a(href='#' + target)
-      span.title=title
-      span.subtitle=subtitle 
-
 +centered()
   nav#social
     +socialLink(
@@ -28,12 +22,3 @@ mixin mainNavigationLink(target,title,subtitle)
   header
     h1.title .uniHack
     h2.subtitle we power hackathons
-  nav#main
-    a.unihack(href='#home') uniHack
-    ul
-      +mainNavigationLink('events', 'Events', 'what we have done')
-      +mainNavigationLink('philosophy', 'Philosophy', 'what hackathon is')
-      //- TODO
-      //- +mainNavigationLink('community', 'Community', 'what epic crowd think')
-      +mainNavigationLink('team', 'Team', 'who we are')
-      +mainNavigationLink('sponsors', 'Sponsors', 'what with')

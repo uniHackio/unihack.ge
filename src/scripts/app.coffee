@@ -5,32 +5,29 @@ onscroller = require('./onscroller')
 pixelize = require('./pixelize')
 locals = require '../locals'
 homeContent = document.querySelector('.page-home .centered-wrapper .centered')
-eventsPage = document.querySelector('.page-events')
-philosophyPage = document.querySelector('.page-philosophy')
-teamPage = document.querySelector('.page-team')
-sponsorsPage = document.querySelector('.page-sponsors')
-
-onscroller.push ((pages,pageIsInView)->
-  ->
-    for page in pages
-      if pageIsInView(page)
-        document.body.classList.add(page.id+'-visable')
-      else      
-        document.body.classList.remove(page.id+'-visable')
-
-)([eventsPage, philosophyPage, teamPage, sponsorsPage],(page) ->
-  scrollTop = document.body.scrollTop
-  scrollHeight = document.body.offsetHeight
-  pageTop = page.offsetTop
-  pageHeight = page.offsetHeight
-  scrollTop > pageTop - scrollHeight and scrollTop < pageTop + pageHeight
+elements = document.getElementsByClassName('page')
+onVisabilityChangeListener = require('./onVisabilityChange')(
+  onscroller.push.bind(onscroller),
+  elements,
+  /page-([a-zA-Z0-9\-]+)/g
 )
+
+onActiveElementChangeListener = require('./onActiveElementChange')(
+  onscroller.push.bind(onscroller),
+  elements
+)
+
+onActiveElementChangeListener.listen (elementId)->  
+  document.body.className = document.body.className.replace(/active-([a-zA-Z0-9\-]+)/g,'')
+  document.body.classList.add("active-#{elementId}")
+  return
+
 locals.members.forEach (member)->
   console.log(member.id)
   pixelize(member.id)
 
 
-f "background-home",
+f "main-background",
   config:
     resize: true
 
@@ -50,41 +47,45 @@ f "background-home",
           "rgba(#{baseColor.get()},#{0.1*baseOpacity.get()})"
         line: new N ()->
           (opacity)->
-            "rgba(#{baseColor.get()},#{(baseOpacity.get()*opacity).toFixed(2)})"
+            "rgba(#{baseColor.get()},#{(baseOpacity.get()*opacity*0.5).toFixed(2)})"
       )(new N("255,255,255"),new N(0.5)))
     @system = new ParticleSystem config
     return
   
   update: (time) ->
-    console.time('update')
+    # console.time('update')
     @system.update(time)  
-    console.timeEnd('update')
+    # console.timeEnd('update')
         
     return
 
   draw: (ctx) ->
-    console.time('draw')
+    # console.time('draw')
     @system.draw(ctx)
-    console.timeEnd('draw')
-    console.timeEnd('f')
-    console.time('f')
+    # console.timeEnd('draw')
+    # console.timeEnd('f')
+    # console.time('f')
     # @anim.stop()
     return
 
-  
-onscroller.push ((homeIsVisable,onHomeVisabilityChange)->
-  ->
-    if window.scrollY > homeContent.offsetHeight and homeIsVisable
-      onHomeVisabilityChange(homeIsVisable = false)
-    else if window.scrollY <= homeContent.offsetHeight and !homeIsVisable
-      onHomeVisabilityChange(homeIsVisable = true)
-)( true, (homeIsVisable)->
+addVisabilityClassToElement = (page)->
+  element = document.body
+  return (isVisable)->
+    if isVisable
+      element.classList.add("#{page}-visable")
+    else
+      element.classList.remove("#{page}-visable")  
+
+onVisabilityChangeListener.listen 'home', addVisabilityClassToElement('home')
+onVisabilityChangeListener.listen 'home', (homeIsVisable)->
   if homeIsVisable
-    document.body.classList.add('home-visable')
     window.config.color.base.color.set('255,255,255')
     window.config.color.base.opacity.set(1)
   else
-    document.body.classList.remove('home-visable')
     window.config.color.base.color.set('0,0,0')  
     window.config.color.base.opacity.set(0.25)
-)
+
+onVisabilityChangeListener.listen 'events', addVisabilityClassToElement('events')
+onVisabilityChangeListener.listen 'philosophy', addVisabilityClassToElement('philosophy')
+onVisabilityChangeListener.listen 'team', addVisabilityClassToElement('team')
+onVisabilityChangeListener.listen 'sponsors', addVisabilityClassToElement('sponsors')

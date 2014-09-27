@@ -9,23 +9,17 @@ module.exports = (id)->
   rescale = null
   scale = minScale
   $(canvas).parent().hover (->
-    scale = 0.9
+    scale = 1
   ), ->
     scale = 0.1
 
 
   image = new Image()
   image.onload = ->
-    triangle = triangler(@width,@height,20)
+    triangle = triangler(@width,@height,20,Math.round(Math.random()*4)+3)
     ctx = canvas.getContext("2d")
-    v = [
-      Math.random() - 0.5,
-      Math.random() - 0.5,
-      Math.random() - 0.5,
-      Math.random() - 0.5,
-      Math.random() - 0.5,
-      Math.random() - 0.5,
-    ]
+    v = triangle.geometry.map (point,i)->
+      return Math.random() - 0.5
     rescale = (->
       cache = {}
       return (s)->
@@ -44,6 +38,7 @@ module.exports = (id)->
           v[i]*=-1
         return point + v[i]
       rescale(scale)
+    # looper.toggle()
     return
 
   image.src = canvas.dataset.source
