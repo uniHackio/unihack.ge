@@ -23,12 +23,11 @@ class Particle
     distance = vec2.create()
     for i in [from..to]
       point = points[i]
-      vec2.subtract(distance, @center, point.center)
-      currentDistance = vec2.length(distance)
+      distanceSqueared = vec2.squaredDistance(@center, point.center)
       drawDistance = point.radius.get() + @radius.get()
-      continue if currentDistance > drawDistance
+      continue if distanceSqueared > drawDistance * drawDistance
 
-      opacity = currentDistance / drawDistance
+      opacity = Math.sqrt(distanceSqueared) / drawDistance
       opacity = 1 - opacity
       @drawLines.push([point.center,@center,opacity])
     return
@@ -58,7 +57,7 @@ class Particle
       draw.circle(ctx,@center,@radius.get(),circleColor)
 
     for lineArgs in @drawLines
-      draw.line(ctx,lineArgs[0],lineArgs[1],lineColor(lineArgs[2]))
+      draw.line(lineArgs[0],lineArgs[1],lineColor(lineArgs[2]))
     @drawLines = []
     return
 

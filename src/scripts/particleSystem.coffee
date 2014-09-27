@@ -1,4 +1,5 @@
 Particle = require './particle'
+draw = require './draw'
 vec2 = require('gl-matrix').vec2
 
 CACHE = 
@@ -59,5 +60,6 @@ class ParticleSystem
     
     for point in @particles
         point.draw(ctx, pointColor, circleColor, lineColor)
+    draw.clearLineCache(ctx)
     return
 module.exports = ParticleSystem
