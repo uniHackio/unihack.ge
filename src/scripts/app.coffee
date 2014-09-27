@@ -50,8 +50,8 @@ f "background-home",
           "rgba(#{baseColor.get()},#{0.1*baseOpacity.get()})"
         line: new N ()->
           (opacity)->
-            "rgba(#{baseColor.get()},#{baseOpacity.get()*opacity.toFixed(5)/2})"
-      )(new N("255,255,255"),new N(1)))
+            "rgba(#{baseColor.get()},#{(baseOpacity.get()*opacity).toFixed(2)})"
+      )(new N("255,255,255"),new N(0.5)))
     @system = new ParticleSystem config
     return
   
@@ -66,9 +66,8 @@ f "background-home",
     console.time('draw')
     @system.draw(ctx)
     console.timeEnd('draw')
-    if window.logTime
-      console.timeEnd('f')
-      console.time('f')
+    console.timeEnd('f')
+    console.time('f')
     # @anim.stop()
     return
 
