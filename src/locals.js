@@ -42,11 +42,10 @@ var members = [
     link('twitter', 'twitter', 'https://twitter.com/demurnodia'),
     link('google-plus', 'google+', 'https://plus.google.com/u/0/+DemurNodia'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/demurnodia'),
-  ]),person('tebex','Giorgi Tabidze', 'TODO','/images/safareli.jpg',[
-    link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
-    link('twitter', 'twitter', 'https://twitter.com/unihackge'),
-    link('google-plus', 'google+', 'https://plus.google.com/107084110225494322165'),
-    link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
+  ]),person('tebex','Giorgi Tabidze', 'TODO','/images/tabex.jpg',[ 
+    link('twitter', 'twitter', 'https://twitter.com/gtabidze'),
+    link('facebook', 'facebook', 'https://fb.com/gmline'),
+    link('behance', 'behance', 'https://be.net/gtabidze'),
   ]),person('otarza','Otar Zakalashvili', 'Technology Agnostic','/images/otarza.jpeg',[
     link('facebook', 'facebook', 'https://www.facebook.com/otarza'),
     link('twitter', 'twitter', 'https://twitter.com/otarza'),
