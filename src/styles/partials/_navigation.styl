@@ -42,6 +42,11 @@ nav#main
     li
       display: inline-block
       height: 100%
+      .active-events &.for-events a,
+      .active-philosophy &.for-philosophy a,
+      .active-team &.for-team a,
+      .active-sponsors &.for-sponsors a
+        box-shadow: inset 0 -3px $blue
       a
         $freeSpace = $navHeight - ($linkTitleHeight + $linkSubtitleHeight)
         padding: $freeSpace*$linkSpacingTop $linkTitleFontSize $freeSpace*$linkSpacingBottom 
@@ -50,7 +55,6 @@ nav#main
         transition: all 0.1s linear;
         &:hover
           box-shadow: inset 0 -3px $blue
-
         span
           display: block
           text-align: left

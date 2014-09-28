@@ -2,8 +2,14 @@
   $background = white
   $lineWidth = 0.2em
   $marginLeft = 6.5em
+
   .background
     background: $background
+  .content
+    background: alpha($background,1)
+    transition: background 1s ease
+    .active-events &
+      background: alpha($background,0)
   .events
     margin-left: 12em
     border-left: solid $lineWidth $lighterGray

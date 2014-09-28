@@ -47,7 +47,7 @@ f "main-background",
           "rgba(#{baseColor.get()},#{0.1*baseOpacity.get()})"
         line: new N ()->
           (opacity)->
-            "rgba(#{baseColor.get()},#{(baseOpacity.get()*opacity*0.5).toFixed(2)})"
+            "rgba(#{baseColor.get()},#{(baseOpacity.get()*opacity).toFixed(2)})"
       )(new N("255,255,255"),new N(0.5)))
     @system = new ParticleSystem config
     return
