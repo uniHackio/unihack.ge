@@ -1,4 +1,4 @@
-spiraler
+unihack.ge
 ========
 
-generative art using spirals
+uniHack Official Website
