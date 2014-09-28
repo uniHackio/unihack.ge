@@ -24,8 +24,8 @@ onActiveElementChangeListener.listen (elementId)->
 
 locals.members.forEach (member)->
   console.log(member.id)
-  pixelize(member.id)
-
+  pixelize.add(member.id)
+pixelize.run()
 
 f "main-background",
   config:
