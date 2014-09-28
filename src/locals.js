@@ -37,7 +37,7 @@ var members = [
     link('facebook', 'facebook', 'https://www.facebook.com/lukaramishvili'),
     link('twitter', 'twitter', 'https://twitter.com/lukaramishvili'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/lukaramishvili'),
-  ]),person('demonno','Demur Nodia', 'TODO','/images/safareli.jpg',[
+  ]),person('demonno','Demur Nodia', 'TODO','/images/demonno.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/demuri.nodia'),
     link('twitter', 'twitter', 'https://twitter.com/demurnodia'),
     link('google-plus', 'google+', 'https://plus.google.com/u/0/+DemurNodia'),
