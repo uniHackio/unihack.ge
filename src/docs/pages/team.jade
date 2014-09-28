@@ -1,7 +1,7 @@
 include ../includes/socialLink.jade
 mixin member(id,name,position,image,links)
   section.member
-    canvas.picture(id=id data-source=image data-scale='0.1')
+    figure.picture(id=id data-source=image data-scale='0.1')
     h1.name=name
     h2.position=position
     nav.links

@@ -12,7 +12,10 @@ var browserify   = require('browserify')
   , gulp         = require('gulp')
   , handleErrors = require('../util/handleErrors')
   , source       = require('vinyl-source-stream')
-  , connect = require('gulp-connect');
+  , connect = require('gulp-connect')
+  , hbsfy = require("hbsfy").configure({
+    extensions: ["cssfy"]
+  });
 
 gulp.task('browserify', function() {
  
@@ -22,11 +25,12 @@ gulp.task('browserify', function() {
     // Specify the entry point of your app
     entries: ['./src/scripts/app.coffee'],
     // Add file extentions to make optional in your requires
-    extensions: ['.coffee'],
+    extensions: ['.coffee','.cssfy '],
     // Enable source maps!
     debug: true
   });
 
+  bundler.transform(hbsfy)
   if(global.isWatching) {
     bundler = watchify(bundler)
   }

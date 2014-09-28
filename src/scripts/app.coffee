@@ -53,18 +53,21 @@ f "main-background",
     return
   
   update: (time) ->
-    # console.time('update')
+    @frameEnd = performance.now();
+    @updateStart = performance.now();
     @system.update(time)  
-    # console.timeEnd('update')
-        
+    @updateEnd = performance.now();
     return
 
   draw: (ctx) ->
-    # console.time('draw')
+    @drawStart = performance.now();
     @system.draw(ctx)
-    # console.timeEnd('draw')
-    # console.timeEnd('f')
-    # console.time('f')
+    @drawEnd = performance.now();
+    update = (@updateEnd - @updateStart).toFixed(2)
+    draw = (@drawEnd - @drawStart).toFixed(2)
+    frame = (@frameEnd - @frameStart).toFixed(2)
+    @frameStart = performance.now();
+    console.log("update: #{update}; draw: #{draw}; frame: #{frame};\r")
     # @anim.stop()
     return
 

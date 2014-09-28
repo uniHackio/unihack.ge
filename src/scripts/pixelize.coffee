@@ -1,45 +1,35 @@
 resize = require('./resize')
-triangler = require('./triangler')
+polygonGen = require('./polygon')
 draw = require('./draw')
+cssTemplate = require './profile.cssfy'
+
+
 module.exports = (id)->
-  canvas = document.getElementById(id)
-  minScale = parseFloat(canvas.dataset.scale)
-  requestId = null
-  triangle = null
-  rescale = null
-  scale = minScale
-  $(canvas).parent().hover (->
-    scale = 1
-  ), ->
-    scale = 0.1
-
-
+  figure = document.getElementById(id)
+  scale = parseFloat(figure.dataset.scale)
   image = new Image()
   image.onload = ->
-    triangle = triangler(@width,@height,20,Math.round(Math.random()*4)+3)
-    ctx = canvas.getContext("2d")
-    v = triangle.geometry.map (point,i)->
-      return Math.random() - 0.5
-    rescale = (->
-      cache = {}
-      return (s)->
-        key = s.toFixed(2)
-        if cache[key] == undefined
-          cache[key] = resize(image, s, canvas);
-        else
-          ctx.putImageData(cache[key],0,0)
-        triangle.mask(ctx)
-    )()
-    rescale(minScale) 
-    looper = draw.loop (time)->
-      triangle.geometry = triangle.geometry.map (point,i)->
-        interval = triangle.range[i]
-        if point+v[i] <=interval[0] || point+v[i] >= interval[1]
-          v[i]*=-1
-        return point + v[i]
-      rescale(scale)
-    # looper.toggle()
+    canvas = resize(image, scale, document.createElement('canvas'))
+    polygon = polygonGen(canvas.width,canvas.height,20,Math.round(Math.random()*4)+3)
+    stops = 7
+    clipPathes = []
+    for i in [1..stops]
+      clipPathes.push({
+        stop: ~~((i)*(100/(stops+1)))
+        path: polygon.generate()
+      })  
+    css = cssTemplate({
+      id:id
+      hoverImage:figure.dataset.source
+      normalImage:canvas.toDataURL()
+      clipPathesStart:polygon.generate()
+      duration: stops*6
+      clipPathes:clipPathes
+    })
+    style = document.createElement('style')
+    style.appendChild(document.createTextNode(css))
+    document.getElementsByTagName('head')[0].appendChild(style)
     return
 
-  image.src = canvas.dataset.source
+  image.src = figure.dataset.source
   
