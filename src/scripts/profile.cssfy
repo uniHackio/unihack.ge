@@ -1,9 +1,11 @@
 #{{id}}:hover{
   background-image:url("{{{hoverImage}}}");
 }
-#{{id}}{
+.team-visable #{{id}}{
   opacity:1;
   top:0;
+}
+#{{id}}{
   transition-delay:{{delay}}s;
   background-image:url("{{{normalImage}}}");
   -webkit-clip-path: polygon({{clipPathesStart}});

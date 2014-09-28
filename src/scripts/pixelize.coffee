@@ -22,7 +22,7 @@ runner = (id,onEnd)->
         path: polygon()
       })  
     css = cssTemplate({
-      delay:(Math.random()*0.3).toFixed(2)
+      delay:(Math.random()*0.5 + 0.3).toFixed(2)
       id:id
       hoverImage: figure.dataset.source
       normalImage: canvas.toDataURL()
@@ -30,6 +30,7 @@ runner = (id,onEnd)->
       duration: duration
       clipPathes: clipPathes
     })
+    figure.classList.add('loaded')
     console.timeEnd(id)
     onEnd(css)
 
