@@ -29,10 +29,8 @@ module.exports = (width, height, amplitude,sides)->
     })
   console.log(pointRanges)
   
-  return {
-    generate: ->
-      points = generate(pointRanges)
-      return points.map((point)->
-        return "#{point[0].toFixed(2)}px #{point[1].toFixed(2)}px"
-      ).join(',')
-  }
+  return ->
+    points = generate(pointRanges)
+    return points.map((point)->
+      return "#{point[0].toFixed(2)}px #{point[1].toFixed(2)}px"
+    ).join(',')

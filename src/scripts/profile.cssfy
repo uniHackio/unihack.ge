@@ -1,14 +1,10 @@
 #{{id}}:hover{
   background-image:url("{{hoverImage}}");
-  -webkit-filter: grayscale(0.3);
-  filter: grayscale(0.3);
 }
 #{{id}}{
   background-image:url("{{normalImage}}");
   -webkit-clip-path: polygon({{clipPathesStart}});
   -webkit-animation: polygon-anim-{{id}} {{duration}}s ease-in-out infinite;
-  -webkit-filter: grayscale(0.7);
-  filter: grayscale(0.7);
 }
 @-webkit-keyframes polygon-anim-{{id}} {
   0%   { -webkit-clip-path: polygon({{clipPathesStart}}); }
