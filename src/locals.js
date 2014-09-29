@@ -16,7 +16,7 @@ var members = [
     link('facebook', 'facebook', 'https://www.facebook.com/gtkesh'),
     link('twitter', 'twitter', 'https://twitter.com/gtkesh'),
     link('google-plus', 'google+', 'https://plus.google.com/u/0/+GiorgiTkeshelashvili'),
-    link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
+    link('github', 'github', 'https://github.com/gtkesh'),
   ]),person('safareli','Irakli Safareli', 'Lord of the Code','/images/safareli.jpg',[
     link('twitter', 'twitter', 'https://twitter.com/safareli'),
     link('google-plus', 'google+', 'https://google.com/+IrakliSafareli'),
