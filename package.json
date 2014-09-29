@@ -54,7 +54,6 @@
     "gulp-uglify": "^1.0.1",
     "gulp-util": "^3.0.1",
     "handlebars": "^2.0.0",
-    "hbsfy": "^2.2.0",
-    "optimist": "^0.6.1"
+    "hbsfy": "^2.2.0"
   }
 }

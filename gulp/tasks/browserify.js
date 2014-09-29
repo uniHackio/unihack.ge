@@ -5,8 +5,6 @@
    If the watch task is running, this uses watchify instead
    of browserify for faster bundling using caching.
 */
-var argv = require('optimist').argv;
-
 var browserify   = require('browserify')
   , watchify     = require('watchify')
   , bundleLogger = require('../util/bundleLogger')
