@@ -1,8 +1,5 @@
-# Meet the team
+# გუნდებს შორის, ყველაზე გუნდი
 
-we are zi best
+ჩვენი საქმიანობის გარდა, პირველ რიგში, ვართ მეგობრები, რაც ნიშნავს იმას, რომ ერთად ვმოგზაურობთ, ვუკრავთ, ვსვამთ ლუდს და ვართ ჩვეულებრივი მოკვდავები*. 
 
-Incipit lambit reddebat, a **nactus** impetus relinquunt utrimque album; Attis
-ausus virgo, glaebis **dryades** colunt caput; suos. Est viae tendit Anaphen,
-ense prius Calaisque posse *horruerant*, liceat, huc. Quod similis quid tamen
-consortia discedet partus, tabellas molli me.
+*თუმცა, ამ უკანასკნელის დამადასტურებელი, არანაირი საბუთი ჯერჯერობით არ გაგვაჩნია..
