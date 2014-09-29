@@ -10,6 +10,15 @@
   background-image:url("{{{normalImage}}}");
   -webkit-clip-path: polygon({{clipPathesStart}});
   -webkit-animation: polygon-anim-{{id}} {{duration}}s ease-in-out infinite;
+  clip-path: polygon({{clipPathesStart}});
+  animation: polygon-anim-{{id}} {{duration}}s ease-in-out infinite;
+}
+@-webkit-keyframes polygon-anim-{{id}} {
+  0%   { -webkit-clip-path: polygon({{clipPathesStart}}); }
+  {{#each clipPathes}} 
+    {{stop}}%  { -webkit-clip-path: polygon({{path}}); }
+  {{/each}}
+  100% { -webkit-clip-path: polygon({{clipPathesStart}}); }
 }
 @-webkit-keyframes polygon-anim-{{id}} {
   0%   { -webkit-clip-path: polygon({{clipPathesStart}}); }
