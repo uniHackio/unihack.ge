@@ -5,6 +5,7 @@
    If the watch task is running, this uses watchify instead
    of browserify for faster bundling using caching.
 */
+var argv = require('optimist').argv;
 
 var browserify   = require('browserify')
   , watchify     = require('watchify')
@@ -12,8 +13,14 @@ var browserify   = require('browserify')
   , gulp         = require('gulp')
   , handleErrors = require('../util/handleErrors')
   , source       = require('vinyl-source-stream')
-  , connect = require('gulp-connect')
-  , hbsfy = require("hbsfy").configure({
+  , gutil        = require('gulp-util')
+  , gulpIf       = require('gulp-if')
+  , streamify    = require('gulp-streamify')
+  , connect      = require('gulp-connect')
+  , uglify       = require('gulp-uglify')
+  , debug        = gutil.env.type !== 'production'
+  , stripDebug   = require('gulp-strip-debug')
+  , hbsfy        = require("hbsfy").configure({
     extensions: ["cssfy"]
   });
 
@@ -27,7 +34,7 @@ gulp.task('browserify', function() {
     // Add file extentions to make optional in your requires
     extensions: ['.coffee','.cssfy '],
     // Enable source maps!
-    debug: true
+    debug: debug
   });
 
   bundler.transform(hbsfy)
@@ -47,6 +54,8 @@ gulp.task('browserify', function() {
       // desired output filename here.
       .pipe(source('app.js'))
       // Specify the output destination
+      .pipe(streamify(gulpIf(!debug,stripDebug())))
+      .pipe(streamify(gulpIf(!debug,uglify())))
       .pipe(gulp.dest('./build/'))
       .pipe(connect.reload())
       // Log when bundling completes!

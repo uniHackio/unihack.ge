@@ -6,6 +6,8 @@ var gulp = require('gulp')
   , jade = require('gulp-jade')
   , LOCALS = require('../../src/locals')
   , connect = require('gulp-connect')
+  , gutil = require('gulp-util')
+  , debug = gutil.env.type !== 'production'
   , filter = require('gulp-filter');
     
 
@@ -15,7 +17,7 @@ gulp.task('jade', function(){
     // .pipe(cache('jade'))
     .pipe(progeny())
     .pipe(jade({
-      pretty: true,
+      pretty: debug,
       locals: LOCALS
     }))
     .pipe(filter(['**index.html']))
