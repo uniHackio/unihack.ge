@@ -1,8 +1,6 @@
-f = require 'franim'
-N = require 'numberer'
-ParticleSystem = require './particleSystem'
-onscroller = require('./onscroller')
-pixelize = require('./pixelize')
+onscroller = require './onscroller'
+pixelize = require './pixelize'
+sketch = require './sketch'
 locals = require '../locals'
 homeContent = document.querySelector('.page-home .centered-wrapper .centered')
 elements = document.getElementsByClassName('page')
@@ -27,50 +25,6 @@ locals.members.forEach (member)->
   pixelize.add(member.id)
 pixelize.run()
 
-f "main-background",
-  config:
-    resize: true
-
-  setup: (ctx) ->
-    config = window.config =
-      max:
-        width: new N(@anim.getWidth)
-        height: new N(@anim.getHeight)
-
-      color: (((baseColor,baseOpacity) ->
-        base:
-          color: baseColor
-          opacity: baseOpacity
-        point: new N ()->
-          "rgba(#{baseColor.get()},#{0.5*baseOpacity.get()})"
-        circle: new N ()->
-          "rgba(#{baseColor.get()},#{0.1*baseOpacity.get()})"
-        line: new N ()->
-          (opacity)->
-            "rgba(#{baseColor.get()},#{(baseOpacity.get()*opacity).toFixed(2)})"
-      )(new N("255,255,255"),new N(0.5)))
-    @system = new ParticleSystem config
-    return
-  
-  update: (time) ->
-    @frameEnd = performance.now();
-    @updateStart = performance.now();
-    @system.update(time)  
-    @updateEnd = performance.now();
-    return
-
-  draw: (ctx) ->
-    @drawStart = performance.now();
-    @system.draw(ctx)
-    @drawEnd = performance.now();
-    update = (@updateEnd - @updateStart).toFixed(2)
-    draw = (@drawEnd - @drawStart).toFixed(2)
-    frame = (@frameEnd - @frameStart).toFixed(2)
-    @frameStart = performance.now();
-    console.log("update: #{update}; draw: #{draw}; frame: #{frame};\r")
-    # @anim.stop()
-    return
-
 addVisabilityClassToElement = (page)->
   element = document.body
   return (isVisable)->
@@ -82,13 +36,45 @@ addVisabilityClassToElement = (page)->
 onVisabilityChangeListener.listen 'home', addVisabilityClassToElement('home')
 onVisabilityChangeListener.listen 'home', (homeIsVisable)->
   if homeIsVisable
-    window.config.color.base.color.set('255,255,255')
-    window.config.color.base.opacity.set(1)
+    sketch.color.base.color.set('255,255,255')
+    sketch.color.base.opacity.set(1)
   else
-    window.config.color.base.color.set('0,0,0')  
-    window.config.color.base.opacity.set(0.25)
+    sketch.color.base.color.set('0,0,0')  
+    sketch.color.base.opacity.set(0.25)
 
 onVisabilityChangeListener.listen 'events', addVisabilityClassToElement('events')
 onVisabilityChangeListener.listen 'philosophy', addVisabilityClassToElement('philosophy')
 onVisabilityChangeListener.listen 'team', addVisabilityClassToElement('team')
 onVisabilityChangeListener.listen 'sponsors', addVisabilityClassToElement('sponsors')
+
+
+$ ->
+  $("a[href*=#]:not([href=#])").click ->
+    if location.pathname.replace(/^\//, "") is @pathname.replace(/^\//, "") and location.hostname is @hostname
+      target = $(@hash)
+      target = (if target.length then target else $("[name=" + @hash.slice(1) + "]"))
+      if target.length
+        $("html,body").animate
+          scrollTop: target.offset().top
+        , 1000
+        false
+
+  return
+
+
+((i, s, o, g, r, a, m) ->
+  i["GoogleAnalyticsObject"] = r
+  i[r] = i[r] or ->
+    (i[r].q = i[r].q or []).push arguments
+    return
+
+  i[r].l = 1 * new Date()
+  a = s.createElement(o)
+  m = s.getElementsByTagName(o)[0]
+  a.async = 1
+  a.src = g
+  m.parentNode.insertBefore a, m
+  return
+) window, document, "script", "//www.google-analytics.com/analytics.js", "ga"
+ga "create", "UA-45966899-1", "auto"
+ga "send", "pageview"

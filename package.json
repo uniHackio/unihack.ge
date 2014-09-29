@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "hbsfy": "^2.2.0",
-    "handlebars": "^2.0.0"
+    "handlebars": "^2.0.0",
+    "gulp-sftp": "^0.1.3"
   }
 }

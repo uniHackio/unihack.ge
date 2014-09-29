@@ -3,13 +3,16 @@
 
   .background
     background: $background
-  article
+  article    
     margin: 0 auto
     font-size: 1.6em
     line-height: 1.3em
     width: (60em / @font-size)
     color: $darkGray
     text-align: justify
+    blockquote
+      border-left: 0.1em solid alpha($blue,0.4)
+      padding-left: 1.5em
     h1:first-letter
       color: $lightBlue
       font-size: 2em

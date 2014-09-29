@@ -23,7 +23,7 @@ var members = [
     link('youtube-play', 'youtube', 'https://www.youtube.com/isafareli'),
     link('linkedin', 'linkedin', 'https://www.linkedin.com/in/safareli'),
     link('github', 'github', 'https://github.com/safareli'),
-  ]),person('revazi','Revaz Zakalashvili', 'TODO','/images/revazi.jpg',[
+  ]),person('revazi','Revaz Zakalashvili', '','/images/revazi.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
     link('twitter', 'twitter', 'https://twitter.com/rzakala'),
     link('google-plus', 'google+', 'https://plus.google.com/+RevazZakalashvili-zakala/'),
@@ -37,12 +37,12 @@ var members = [
     link('facebook', 'facebook', 'https://www.facebook.com/lukaramishvili'),
     link('twitter', 'twitter', 'https://twitter.com/lukaramishvili'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/lukaramishvili'),
-  ]),person('demonno','Demur Nodia', 'TODO','/images/demonno.jpg',[
+  ]),person('demonno','Demur Nodia', '','/images/demonno.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/demuri.nodia'),
     link('twitter', 'twitter', 'https://twitter.com/demurnodia'),
     link('google-plus', 'google+', 'https://plus.google.com/u/0/+DemurNodia'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/demurnodia'),
-  ]),person('tebex','Giorgi Tabidze', 'TODO','/images/tabex.jpg',[ 
+  ]),person('tebex','Giorgi Tabidze', 'User-Friendly','/images/tabex.jpg',[ 
     link('twitter', 'twitter', 'https://twitter.com/gtabidze'),
     link('facebook', 'facebook', 'https://fb.com/gmline'),
     link('behance', 'behance', 'https://be.net/gtabidze'),
