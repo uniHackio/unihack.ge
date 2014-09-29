@@ -29,10 +29,11 @@ var members = [
     link('google-plus', 'google+', 'https://plus.google.com/+RevazZakalashvili-zakala/'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
   ]),person('stichoza','Levan Velijanashvili', 'UNIX Junkie', '/images/stichoza.png',[
-    link('facebook', 'facebook', 'https://www.facebook.com/stichoza'),
-    link('twitter', 'twitter', 'https://twitter.com/Stichoza'),
-    link('google-plus', 'google+', 'https://plus.google.com/101847100678903848318'),
-    link('youtube-play', 'youtube', 'https://www.youtube.com/stichoza'),
+    link('external-link-square','website', 'https://stichoza.com/'),
+    link('github-square',       'github',  'https://github.com/Stichoza'),
+    link('twitter-square',      'twitter', 'https://twitter.com/Stichoza'),
+    link('facebook-square',     'facebook','https://facebook.com/Stichoza'),
+    link('linkedin-square',     'linkedin','http://www.linkedin.com/in/stichoza'),
   ]),person('zero','Luka Ramishvili', 'metahacker','/images/zero.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/lukaramishvili'),
     link('twitter', 'twitter', 'https://twitter.com/lukaramishvili'),
