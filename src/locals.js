@@ -28,12 +28,12 @@ var members = [
     link('twitter', 'twitter', 'https://twitter.com/rzakala'),
     link('google-plus', 'google+', 'https://plus.google.com/+RevazZakalashvili-zakala/'),
     link('youtube-play', 'youtube', 'https://www.youtube.com/uniHackge'),
-  ]),person('stichoza','Levan Velijanashvili', 'UNIX Junkie', '/images/stichoza.png',[
-    link('external-link-square','website', 'https://stichoza.com/'),
-    link('github-square',       'github',  'https://github.com/Stichoza'),
-    link('twitter-square',      'twitter', 'https://twitter.com/Stichoza'),
-    link('facebook-square',     'facebook','https://facebook.com/Stichoza'),
-    link('linkedin-square',     'linkedin','http://www.linkedin.com/in/stichoza'),
+  ]),person('stichoza','Levan Velijanashvili', 'UNIX Junkie', '/images/stichoza.jpg',[
+    link('external-link','website', 'https://stichoza.com/'),
+    link('github',       'github',  'https://github.com/Stichoza'),
+    link('twitter',      'twitter', 'https://twitter.com/Stichoza'),
+    link('facebook',     'facebook','https://facebook.com/Stichoza'),
+    link('linkedin',     'linkedin','http://www.linkedin.com/in/stichoza'),
   ]),person('zero','Luka Ramishvili', 'metahacker','/images/zero.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/lukaramishvili'),
     link('twitter', 'twitter', 'https://twitter.com/lukaramishvili'),
