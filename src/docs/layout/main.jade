@@ -4,7 +4,6 @@ mixin mainNavigationLink(target,title,subtitle)
       span.title=title
       span.subtitle=subtitle 
 
-
 doctype html
 html(lang="en")
   head
@@ -17,10 +16,8 @@ html(lang="en")
       ul
         +mainNavigationLink('events', 'Events', 'რა გაგვიკეთებია აქამდე')
         +mainNavigationLink('philosophy', 'Philosophy', 'ჩვენი ხედვა')
-        //- TODO
-        //- +mainNavigationLink('community', 'Community', 'what epic crowd think')
         +mainNavigationLink('team', 'Team', 'ყველაზე გუნდი')
-        +mainNavigationLink('sponsors', 'Sponsors', 'სპონსორები')
+        //- +mainNavigationLink('sponsors', 'Sponsors', 'სპონსორები')
     div#main-wrapper
       block content
     script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
