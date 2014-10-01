@@ -1,4 +1,4 @@
 unihack.ge
 ========
 
-uniHack Official Website
+uniHack Official Website (GE version)
