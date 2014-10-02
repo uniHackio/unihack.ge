@@ -29,20 +29,20 @@ f "main-background",
     return
   
   update: (time) ->
-    @frameEnd = performance.now();
-    @updateStart = performance.now();
+    @frameEnd = Date.now();
+    @updateStart = Date.now();
     @system.update(time)  
-    @updateEnd = performance.now();
+    @updateEnd = Date.now();
     return
 
   draw: (ctx) ->
-    @drawStart = performance.now();
+    @drawStart = Date.now();
     @system.draw(ctx)
-    @drawEnd = performance.now();
+    @drawEnd = Date.now();
     update = (@updateEnd - @updateStart).toFixed(2)
     draw = (@drawEnd - @drawStart).toFixed(2)
     frame = (@frameEnd - @frameStart).toFixed(2)
-    @frameStart = performance.now();
+    @frameStart = Date.now();
     console.log("update: #{update}; draw: #{draw}; frame: #{frame};\r")
     # @anim.stop()
     return
