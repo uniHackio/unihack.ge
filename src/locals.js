@@ -23,7 +23,7 @@ var members = [
     link('youtube-play', 'youtube', 'https://www.youtube.com/isafareli'),
     link('linkedin', 'linkedin', 'https://www.linkedin.com/in/safareli'),
     link('github', 'github', 'https://github.com/safareli'),
-  ]),person('revazi','Revaz Zakalashvili', '','/images/revazi.jpg',[
+  ]),person('revazi','Revaz Zakalashvili', 'Code Lover','/images/revazi.jpg',[
     link('facebook', 'facebook', 'https://www.facebook.com/unihackge'),
     link('twitter', 'twitter', 'https://twitter.com/rzakala'),
     link('google-plus', 'google+', 'https://plus.google.com/+RevazZakalashvili-zakala/'),
