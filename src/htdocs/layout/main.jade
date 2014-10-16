@@ -8,16 +8,17 @@ doctype html
 html(lang="en")
   head
     meta(charset='UTF-8')
-    meta(property='og:title', content='uniHack')
+    meta(property='og:title', content=t('META_TITLE'))
     meta(property='og:type', content='website')
-    meta(property='og:image', content='http://unihack.ge/images/logo.png')
-    meta(property='og:url', content='http://unihack.ge/')
-    meta(property='og:description', content='Let\'s build things that matter. Together.')
-    meta(name='description', content='Let\'s build things that matter. Together.')
-    meta(property='og:site_name', content='uniHack.ge')
+    meta(property='og:image', content= t('META_SITE_URL') + '/images/logo.png')
+    meta(property='og:url', content= t('META_SITE_URL'))
+    meta(property='og:description', content=t('META_DESCRIPTION'))
+    meta(name='description', content=t('META_DESCRIPTION'))
+    meta(property='og:site_name', content=t('META_SITE_NAME'))
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    link(rel='stylesheet', href='style.css')
+    link(rel='stylesheet', href='/style.css')
+    link(rel='shortcut icon' href='/images/favicon.ico')
     title= uniHack
   body.home-visable
     div#main-background
