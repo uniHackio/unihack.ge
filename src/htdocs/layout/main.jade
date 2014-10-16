@@ -25,11 +25,11 @@ html(lang="en")
     nav#main
       a.unihack(href='#home') uniHack
       ul
-        +mainNavigationLink('events', 'Events', 'რა გაგვიკეთებია აქამდე')
-        +mainNavigationLink('philosophy', 'Philosophy', 'ჩვენი ხედვა')
-        +mainNavigationLink('team', 'Team', 'ყველაზე გუნდი')
-        //- +mainNavigationLink('sponsors', 'Sponsors', 'სპონსორები')
+        +mainNavigationLink('events', 'Events', t('რა გაგვიკეთებია აქამდე'))
+        +mainNavigationLink('philosophy', 'Philosophy', t('ჩვენი ხედვა'))
+        +mainNavigationLink('team', 'Team', t('ყველაზე გუნდი'))
+        //- +mainNavigationLink('sponsors', 'Sponsors', t('სპონსორები')
     div#main-wrapper
       block content
     script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
-    script(src='app.js')
+    script(src='/app.js')

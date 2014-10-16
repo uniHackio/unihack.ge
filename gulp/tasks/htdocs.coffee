@@ -1,5 +1,9 @@
 es = require('event-stream')
 localizer = require('../util/t')
+merge = require('merge')
+marked  = require( "marked" )
+fs = require 'fs'
+path = require 'path'
 module.exports = (gulp, plugins, config)->
   gulp.task 'htdocs', ->
     i18n = localizer(config.defaultLanguageKey,config.locals)
@@ -12,7 +16,13 @@ module.exports = (gulp, plugins, config)->
         .pipe plugins.clone()
         .pipe plugins.jade
           pretty: config.idDevelopment
-          locals:i18n.use(config.data,t)
+          locals:merge config.data,
+            t:t
+            md:(filePath)->
+              filePath = path.join(config.dir.src.htdocs,t('languagePrefix'),filePath)
+              contents = fs.readFileSync(filePath,'utf8')
+              marked(contents)
+          # locals1:console.log i18n.use(config.data,t)
         .pipe plugins.rename
           dirname: t('languagePrefix')
       files.push file

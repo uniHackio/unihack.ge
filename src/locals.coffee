@@ -61,13 +61,31 @@ members = [
 module.exports = 
   data:
     members: members
-  defaultLanguageKey: 'en'
+  defaultLanguageKey: 'ka'
   locals:
-    en:
+    ka:
       'META_SITE_URL': 'http://unihack.ge'
       'META_TITLE': 'uniHack'
       'META_SITE_NAME': 'uniHack.ge'
       'META_DESCRIPTION': "Let's build things that matter. Together.",
-      'languagePrefix': 'en/'
-    ka:
       'languagePrefix': ''
+      'რა გაგვიკეთებია აქამდე': 'რა გაგვიკეთებია აქამდე'
+      'ჩვენი ხედვა': 'ჩვენი ხედვა'
+      'ყველაზე გუნდი': 'ყველაზე გუნდი'
+      'სპონსორები': 'სპონსორები'
+      'web page of %s': '%s-ის ვებგვერდი'
+      'უნიჰაკის დაბადება': 'უნიჰაკის დაბადება'
+      "Let's build things that matter. Together.": "Let's build things that matter. Together."
+      'Events': 'Events'
+      'uniHackge on %s': 'uniHackge %s-ზე'
+    en:
+      'languagePrefix': 'en/'
+      'რა გაგვიკეთებია აქამდე': 'რ.ა. გ.აგ.ვ.ი.კ.ე.თ.ე..ბ.ი.ა აქამდე'
+      'ჩვენი ხედვა': 'ჩვ.ენ.ი. .ხ.ე.დ.ვა'
+      'ყველაზე გუნდი': 'ყვ.ე.ლ.აზე გუ.ნ.დი'
+      'სპონსორები': 'ს.პო.ნ.ს.ო.რები'
+      'web page of %s': 'w..eb .pa.ge. o.f %s'
+      'უნიჰაკის დაბადება': 'უნი.ჰ.ა.კ.ი.ს. .დ.ა.ბ..ადება'
+      "Let's build things that matter. Together.": "Le.t.'s. .b.u.i.l.d. .t.h.in.gs. that matter. Together."
+      'Events': 'Ev.e.nts'
+      'uniHackge on %s': 'un.i.H.a.ck...ge on %s'

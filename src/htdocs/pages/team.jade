@@ -9,8 +9,7 @@ mixin member(id,name,position,image,links)
         +socialLink(link.icon,name +' on'+ link.on,link.href)
       
 section.team
-  article.about-us
-    include:markdown ../articles/about-us.md
+  article.about-us!=md('./articles/about-us.md')
 
   div.members
     for member in members

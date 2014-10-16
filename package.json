@@ -62,6 +62,8 @@
     "event-stream": "^3.1.7",
     "sprintf": "^0.1.4",
     "gulp-clone": "^1.0.0",
-    "gulp-rename": "^1.2.0"
+    "gulp-rename": "^1.2.0",
+    "merge": "^1.2.0",
+    "marked": "^0.3.2"
   }
 }

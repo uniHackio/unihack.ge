@@ -7,7 +7,6 @@ block content
   +page('events')
     include ./pages/events.jade
   +page('philosophy')
-    article
-      include:markdown ./articles/philosophy.md
+    article!=md('./articles/philosophy.md')
   +page('team')
     include ./pages/team.jade
