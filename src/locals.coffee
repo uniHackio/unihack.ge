@@ -80,7 +80,7 @@ module.exports =
       'uniHackge on %s': 'uniHackge %s-ზე'
     en:
       'languagePrefix': 'en/'
-      'რა გაგვიკეთებია აქამდე': 'რ.ა. გ.აგ.ვ.ი.კ.ე.თ.ე..ბ.ი.ა აქამდე'
+      'Past Events': 'Past Events'
       'Our Vision': 'Our Vision'
       'Team': 'Team'
       'Sponsors': 'Sponsors'
