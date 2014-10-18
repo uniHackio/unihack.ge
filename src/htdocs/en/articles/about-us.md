@@ -1,5 +1,8 @@
-# ENგუნდებს შორის, ყველაზე გუნდი
+# THE Team
 
-ჩვენი საქმიანობის გარდა, პირველ რიგში, ვართ მეგობრები, რაც ნიშნავს იმას, რომ ერთად ვმოგზაურობთ, ვუკრავთ, ვსვამთ ლუდს და ვართ ჩვეულებრივი მოკვდავები*. 
+We're friends. We travel together. We play music together. We drink beer together. We code together. 
+We are dreamers but most importantly we are doers. We make great things happen. That's what we do. 
 
-*თუმცა, ამ უკანასკნელის დამადასტურებელი არანაირი საბუთი ჯერჯერობით არ გაგვაჩნია..
+
+
+
