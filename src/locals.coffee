@@ -81,11 +81,11 @@ module.exports =
     en:
       'languagePrefix': 'en/'
       'რა გაგვიკეთებია აქამდე': 'რ.ა. გ.აგ.ვ.ი.კ.ე.თ.ე..ბ.ი.ა აქამდე'
-      'ჩვენი ხედვა': 'ჩვ.ენ.ი. .ხ.ე.დ.ვა'
-      'ყველაზე გუნდი': 'ყვ.ე.ლ.აზე გუ.ნ.დი'
-      'სპონსორები': 'ს.პო.ნ.ს.ო.რები'
+      'Our Vision': 'Our Vision'
+      'Team': 'Team'
+      'Sponsors': 'Sponsors'
       'web page of %s': 'w..eb .pa.ge. o.f %s'
-      'უნიჰაკის დაბადება': 'უნი.ჰ.ა.კ.ი.ს. .დ.ა.ბ..ადება'
-      "Let's build things that matter. Together.": "Le.t.'s. .b.u.i.l.d. .t.h.in.gs. that matter. Together."
-      'Events': 'Ev.e.nts'
+      'UniHack Was Born': 'UniHack Was Born'
+      "Let's build things that matter. Together.": "Let's build things that matter. Together."
+      'Events': 'Events'
       'uniHackge on %s': 'un.i.H.a.ck...ge on %s'
