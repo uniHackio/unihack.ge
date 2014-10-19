@@ -77,15 +77,20 @@ module.exports =
       'უნიჰაკის დაბადება': 'უნიჰაკის დაბადება'
       "Let's build things that matter. Together.": "Let's build things that matter. Together."
       'Events': 'Events'
-      'uniHackge on %s': 'uniHackge %s-ზე'
+      'uniHackge on %s': 'uniHack %s-ზე'
     en:
+      'რა გაგვიკეთებია აქამდე': 'What We Have Done'
+      'ჩვენი ხედვა': 'Our Vision'
+      'ყველაზე გუნდი': 'THE Team'
+      'სპონსორები': 'Sponsors'
+      'უნიჰაკის დაბადება': 'the birth of uniHack'
       'languagePrefix': 'en/'
       'Past Events': 'Past Events'
       'Our Vision': 'Our Vision'
       'Team': 'Team'
       'Sponsors': 'Sponsors'
-      'web page of %s': 'w..eb .pa.ge. o.f %s'
+      'web page of %s': 'web page of %s'
       'UniHack Was Born': 'UniHack Was Born'
       "Let's build things that matter. Together.": "Let's build things that matter. Together."
       'Events': 'Events'
-      'uniHackge on %s': 'un.i.H.a.ck...ge on %s'
+      'uniHackge on %s': 'uniHack on %s'
