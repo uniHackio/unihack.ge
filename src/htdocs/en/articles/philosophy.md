@@ -1,35 +1,30 @@
-#ENფილოსოფია
-**უნიჰაკი** დავაარსეთ მეგობრებმა, 2013 წლის დეკემბერში. ვაკვირდებოდით მსოფლიოში ყველაზე წარმატებულ უნივერსიტეტებს და ქვეყნებს და მივედით იმ აზრამდე, რომ იმ ინტელექტუალურ რესურსს, რომელიც ქართველ სტუდენტებს გააჩნიათ, სჭირდება ადგილი და გარემო რეალიზებისათვის. 
+# Vision
 
-უნიჰაკის, როგორც **სტუდენტური**  ორგანიზაციის მიზანია საქართველო აქციოს ჰაკერ კულტურის  ყველაზე დიდ კერად ჩვენს რეგიონსა და მთელს ევროპის კონტინენტზე. გვსურს ვიყოთ ის მამოძრავებელი ძალა, რომელიც ქართველი სტუდენტების იდეებს, ენერგიას,  მისწრაფებას და რევოლუციურ პროექტებს მთელს მსოფლიოს ანახებს. 
+UniHack was founded by a group of friends in December of 2013 in Tbilisi, Georgia. We are an awesome team of hackers who decided to spread the hackathon storm to our part of the planet because we believe that Georgian students are true hackers and the world needs them.
 
-ჩვენ გვჯერა, რომ როცა საზოგადოებაში პრობლემას ვხედავთ, პირველ რიგში თავად ვართ პასუხისმგებელი მის გადასაჭრელად და ნებისმიერ სამთავრობო ორგანიზაციაზე თუ კორპორაციაზე უკეთ შევძლებთ ამის გაკეთებას, რადგან ვთვლით, რომ უკეთ გვესმის პრობლემის ყველა დეტალი, უკეთ გვესმის პრობლემის ყველა მხარე და არ გაგვაჩნია არანაირი სხვა მოტივაცია გარდა დაუშრეტელი **ენთუზიაზმისა**, რომ ჩვენი ქვეყანა და მსოფლიო უკეთესობისკენ შევცვალოთ და რწმენისა, რომ ამ მისიაში, ქართველ სტუდენტებს შეუძლიათ უდიდესი როლი ითამაშონ. 
+Our goal is to spread the hacker culture in our region and get more and more cities and countries involved. We are turning Georgia into a home for hackers from all around the world. We are turning Georgia into a place where great people meet each other, build awesome things together and make the world a better place. 
 
-უკვე ჩატარებული ორი სტუდენტური ჰაკათონიდან გაგვიძლიერდა რწმენა იმისა, რომ **ჰაკათონი** საუკეთესო ადგილია ახალი მეგობრების გასაცნობად, **გიჟურ** იდეებზე სამუშაოდ და მეგობრებთან ერთად სამხიარულოდ. თუმცა ამ ყველაფრის გარდა, ჩვენმა ჯგუფმა და ქომუნითიმ, რომელიც ბოლო წლის განმავლობაში ერთად შევქმენით, შეიძინა უფრო დიდი მისია, ვიდრე ოდესმე წარმოვიდგენდით - **ჩვენ გვაქვს პრეტენზია და ყველა რესურსი იმისათვის, რომ ერთად დავწეროთ ქვეყნის უახლესი ისტორია და იმისათვის, რომ საქართველო და მსოფლიო უკეთესი გავხადოთ, ვიდრე დღესაა**.
+##Core Values
+Since the very first day we believe in these core values and this is what our community and its future stands on:
 
-##ღირებულებები
-დაარსებიდან დღემდე გვწამს და ბოლომდე მივყვებით ჩვენს ღირებულებებს და გვჯერა, რომ სწორედ მათი ერთგულება განაპირობებს ჩვენი ჯგუფის წარმატებას და მათ ერთგულებაზეა დამოკიდებული ჩვენი მომავალიც. 
+* Love of Building Things.
 
-ესაა, რაზეც დგას უნიჰაკი:
+>One single most important thing our team and community have in common is the passion and love of building things every single day.
 
-* შენების, სწავლის და ჰაკინგის სიყვარული.
 
->ჩვენს გუნდს და ქომუნითის გვაერთიანებს გიჟური იდეების რეალიზების და ამ პროცესში სწავლის დაუშრეტელი სურვილი.
+* Humbleness
 
-* თავმდაბლობა
+>One of the most amazing things you realize during the hackathon is that there's so much to learn and how everyone's talent and experience is invaluable and unique. 
 
->წარმოუდგენელია არ ვიყოთ თავმდაბლები, როდესაც ერთმანეთს ვუყურებთ საქმეში და ვხვდებით, თუ რაოდენ ღირებულია თითოეულის ნიჭი, გამოცდილება და სისხარტე.
+* Willingness to Help Others and Get Help from Others
 
-* სხვისი დახმარება და დახმარების მიღების სურვილი
+>Everyone has something to learn. Hackathons are full of awesome people with different skills and experiences. Sharing the knowledge and experience to each other is what drives our community.  
 
->ყველა ჩვენგანი უნიკალურია საკუთარი ნიჭითა და გამოცდილებით. მზადყოფნა, რომ სხვას დავეხმაროთ ან სხვისგან მივიღოთ დახმარება, არის ერთ-ერთი ყველაზე ფუნდამენტურად მნიშვნელოვანი ფასეულობა, რის გარეშეც წარმოუდგენელია ჩვენი ერთობის შენარჩუნება და განვითარება.
+* Create Experiences
 
-* დაუვიწყარი შთაბეჭდილებების შექმნა
+>Every single hackathon and every single person you meet there can change your life for ever. We inspire each other. 
 
->გვჯერა, რომ ჩვენ შეგვიძლია ერთმანეთის ცხოვრების შეცვლა დაუვიწყარი გამოცდილებების შექმნით. უფრო მეტიც, ეს ჩვენი მოვალეობაა.
+* Boldness
 
-* სიმამაცე
+>We understand that the path we chose is not an easy one. But we get bored by doing easy things. We know we're gonna face a lot of challenges. Lot of disappointment. But, we are fearless because we love what we do, we are fearless because we are together in this, we are fearless because that's the only option we got. 
 
->გვესმის, რომ ჩვენი მისიის გზაზე ბევრ რთულ დაბრკოლებას შეიძლება გადავეყაროთ. თუმცა ყველაფრისთვის მზად ვართ და დარწმუნებულები ვართ, რომ ჩვენს ერთიანობას ვერაფერი შეაჩერებს.
-
-თითოეული ზემოხსენებული ღირებულება თანაბრად სასიცოცხლოა ჩვენი ერთობის შესანარჩუნებლად და საერთო მისიის ბოლომდე მისაყვანად.
