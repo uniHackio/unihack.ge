@@ -1,1 +1,3 @@
 ENპირველი ჰაკათონის შემდეგ, მოგვეცა რწმენა და გამოცდილება, რომ უფრო მეტი შეგვიძლია და გადავწყვიტეთ ევროპაში ყველაზე დიდი სტუდენტური ჰაკათონის ჩატარება, რომელსაც საბოლოოდ თავისუფალი უნივერსიტეტის, მაკსის სკოლამ უმასპინძლა. hack@MACS კიდევ უფრო მასშტაბური იყო, მონაწილეთა უფრო დიდი რაოდენობით და გიჟური იდეებითა და პროექტებით.  
+
+After the first hackathon we started working on something even more challenging and huge. With the experience we got during hack@CST and the community of hackers that we built over the weekend, we knew we couldn't stop. The next big step was hack@MACS hosted by the School of Mathematics and Computer Science at Free University. hack@MACS was one of the biggest college hackathons in the whole Eastern Europe with even more awesome teams and projects. 
