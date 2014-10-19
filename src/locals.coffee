@@ -65,6 +65,7 @@ module.exports =
   locals:
     ka:
       'META_SITE_URL': 'http://unihack.ge'
+      'CONTACT_MAIL': 'team@unihack.ge'
       'META_TITLE': 'uniHack'
       'META_SITE_NAME': 'uniHack.ge'
       'META_DESCRIPTION': "Let's build things that matter. Together.",
@@ -79,6 +80,7 @@ module.exports =
       'Events': 'Events'
       'uniHackge on %s': 'uniHack %s-ზე'
     en:
+      'CONTACT_MAIL': 'team@unihack.ge'
       'რა გაგვიკეთებია აქამდე': 'What We Have Done'
       'ჩვენი ხედვა': 'Our Vision'
       'ყველაზე გუნდი': 'THE Team'
