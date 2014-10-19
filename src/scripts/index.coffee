@@ -1,7 +1,7 @@
 onscroller = require './onscroller'
 pixelize = require './pixelize'
 sketch = require './sketch'
-locals = require '../locals'
+locals = require('../locals').data
 homeContent = document.querySelector('.page-home .centered-wrapper .centered')
 elements = document.getElementsByClassName('page')
 onVisabilityChangeListener = require('./onVisabilityChange')(

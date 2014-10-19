@@ -1,0 +1,35 @@
+mixin mainNavigationLink(target,title,subtitle)
+  li(class='for-' + target)
+    a(href='#' + target)
+      span.title=title
+      span.subtitle=subtitle 
+
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    meta(property='og:title', content=t('META_TITLE'))
+    meta(property='og:type', content='website')
+    meta(property='og:image', content= t('META_SITE_URL') + '/images/logo.png')
+    meta(property='og:url', content= t('META_SITE_URL'))
+    meta(property='og:description', content=t('META_DESCRIPTION'))
+    meta(name='description', content=t('META_DESCRIPTION'))
+    meta(property='og:site_name', content=t('META_SITE_NAME'))
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    link(rel='stylesheet', href='/style.css')
+    link(rel='shortcut icon' href='/images/favicon.ico')
+    title= uniHack
+  body.home-visable
+    div#main-background
+    nav#main
+      a.unihack(href='#home') uniHack
+      ul
+        +mainNavigationLink('events', 'Events', t('რა გაგვიკეთებია აქამდე'))
+        +mainNavigationLink('philosophy', 'Philosophy', t('ჩვენი ხედვა'))
+        +mainNavigationLink('team', 'Team', t('ყველაზე გუნდი'))
+        //- +mainNavigationLink('sponsors', 'Sponsors', t('სპონსორები')
+    div#main-wrapper
+      block content
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    script(src='/app.js')

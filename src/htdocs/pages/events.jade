@@ -1,0 +1,45 @@
+include ../includes/icon.jade
+section.events
+  h1.hidden t('Events')
+  article
+    header.no-date
+      h1 hackTbilisi
+      nav
+        a(href='//hackTbilisi.com/' title=t('web page of %s',['hackTbilisi']))
+          +icon('info-circle')
+      time(datetime="2014-12-19/2014-12-21")
+        i.year 2014
+        i.month dec
+    .text!=md('./articles/hacktbilisi.md')
+
+
+  article
+    header
+      h1 hack@MACS
+      nav
+        //- a(href='//blog.unihack.ge/hackatmacs' title='our blogpost about hack@macs')
+        //-   +icon('paragraph')
+        a(href='//macs.unihack.ge/' title=t('web page of %s',['hack@macs']))
+          +icon('info-circle')
+      time(datetime="2014-03-14/2014-03-16")
+        i.year 2014
+        i.month mar
+
+    .text!=md('./articles/hackatmacs.md')
+  article
+    header
+      h1 hack@CST
+      nav
+        //- a(href='//blog.unihack.ge/hackatcst' title='our blogpost about hack@cst')
+        //-   +icon('paragraph')
+        a(href='//cst.unihack.ge/' title=t('web page of %s',['hack@cst']))
+          +icon('info-circle')
+      time(datetime="2013-12-20/2013-12-22")
+        i.year 2013
+        i.month dec
+    .text!=md('./articles/hackatcst.md')
+
+  article
+    header.no-date
+      //- todo use date tag
+      h1=t('უნიჰაკის დაბადება')
