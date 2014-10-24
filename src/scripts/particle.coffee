@@ -44,6 +44,11 @@ class Particle
 
   update: (time) ->
     maxVelocity = 0.5
+    t = (new Date()).getTime()/(10 * @radius.get())
+    t = vec2.fromValues(Math.sin(t), Math.cos(t))
+    vec2.add(@acceleration, @acceleration, t)
+    vec2.normalize(@acceleration, @acceleration)
+    vec2.scale(@acceleration, @acceleration, 0.005) 
     vec2.add(@velocity, @velocity, @acceleration)
     length = vec2.length(@velocity)
     vec2.scale(@velocity, @velocity, maxVelocity/length ) if length > maxVelocity 
