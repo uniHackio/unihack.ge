@@ -20,10 +20,10 @@
   {{/each}}
   100% { -webkit-clip-path: polygon({{clipPathesStart}}); }
 }
-@-webkit-keyframes polygon-anim-{{id}} {
-  0%   { -webkit-clip-path: polygon({{clipPathesStart}}); }
+@keyframes polygon-anim-{{id}} {
+  0%   { clip-path: polygon({{clipPathesStart}}); }
   {{#each clipPathes}} 
-    {{stop}}%  { -webkit-clip-path: polygon({{path}}); }
+    {{stop}}%  { clip-path: polygon({{path}}); }
   {{/each}}
-  100% { -webkit-clip-path: polygon({{clipPathesStart}}); }
+  100% { clip-path: polygon({{clipPathesStart}}); }
 }
