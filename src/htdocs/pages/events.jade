@@ -3,15 +3,26 @@ section.events
   h1.hidden t('Events')
   article
     header.no-date
-      h1 hackTBILISI
+      h1 hackTBILISI Fall 2015
       nav
         a(href='//hackTbilisi.com/' title=t('web page of %s',['hackTBILISI']))
           +icon('info-circle')
-      time(datetime="2014-12-19/2014-12-21")
+      time(datetime="2015-12-18/2014-12-20")
+        i.year 2015
+        i.month dec
+    .text!=md('./articles/hacktbilisi_fall_2015.md')
+  
+  article
+    header
+      h1 hackTBILISI Fall 2014
+      nav
+        //-   +icon('paragraph')
+        a(href='//macs.unihack.ge/' title=t('web page of %s',['hackTBILISI']))
+          +icon('info-circle')
+      time(datetime="2013-12-19/2013-12-21")
         i.year 2014
         i.month dec
-    .text!=md('./articles/hacktbilisi.md')
-
+    .text!=md('./articles/hacktbilisi_fall_2014.md')
 
   article
     header
@@ -24,8 +35,8 @@ section.events
       time(datetime="2014-03-14/2014-03-16")
         i.year 2014
         i.month mar
-
     .text!=md('./articles/hackatmacs.md')
+    
   article
     header
       h1 hack@CST
