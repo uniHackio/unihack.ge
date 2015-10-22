@@ -35,7 +35,7 @@ module.exports = (gulp, plugins, config)->
         .pipe(source(config.dir.build.script))
       if(config.isProduction)
         stream.pipe(plugins.streamify(plugins.stripDebug())) 
-        stream.pipe(plugins.streamify(plugins.uglify()))
+              .pipe(plugins.streamify(plugins.uglify()))
       stream.pipe(gulp.dest(config.dir.build.base))
         .pipe(plugins.if(config.isDevelopment,plugins.connect.reload()))
         .on "end", config.logger.end.bind(undefined,'scripts')

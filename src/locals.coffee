@@ -79,6 +79,8 @@ module.exports =
       "Let's build things that matter. Together.": "Let's build things that matter. Together."
       'Events': 'Events'
       'uniHackge on %s': 'uniHack %s-ზე'
+      'facebook event of %s': 'facebook ივენთი: %s'
+      'gallery of %s': 'პროექტების გალერეა: %s'
     en:
       'CONTACT_MAIL': 'team@unihack.ge'
       'რა გაგვიკეთებია აქამდე': 'What We Have Done'
@@ -96,3 +98,5 @@ module.exports =
       "Let's build things that matter. Together.": "Let's build things that matter. Together."
       'Events': 'Events'
       'uniHackge on %s': 'uniHack on %s'
+      'facebook event of %s': 'facebook event of %s'
+      'gallery of %s': 'gallery of %s'
